@@ -1,22 +1,24 @@
-// Importando a classe HttpAxios
-import HttpAxios, { ConfigHttpAxios } from './HttpAxios';
+import Client, { configParams } from './Client';
 
-// Definindo a configuração para a classe HttpAxios
-const config: ConfigHttpAxios = {
-    debug: false,
-    baseUri: 'http://127.0.0.1:5000',
-    token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDUyMDc2MDAxNzM3MzE0OTc3NjQiLCJ1c2VybmFtZSI6IkdhYnJpZWwgQXJhbnRkIEZlbGlwZSIsImVtYWlsIjoiZ3JhbnRkLmN0dEBnbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiZXhwIjoxNzE2Mzk5OTQ4fQ.gg-17o5sNVM_eR3JKHMyXSQO9BYP64FFCTYZdj1jAig',
+const config: configParams = {
+    ambiente: 2,
+    token: "teste",
     options: {
-        timeout: 10000,
+        debug: false,
+        timeout: 60,
         port: 443
     }
 };
 
-const http = new HttpAxios(config);
+const client = new Client(config);
 
-async function testarHttpAxios() {
-    const responseData = await http.send('GET', '/event/get-list');
-    console.log(responseData);
+async function testarSend() {
+    try {
+        const responseData = await client.send('GET', '/get_info/1');
+        console.log(responseData);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-testarHttpAxios();
+testarSend();

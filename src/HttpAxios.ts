@@ -66,5 +66,28 @@ export default class HttpAxios {
         }
     }
 
-}
+    /* 
+        async sendMultipart(route:string, payload:string){
 
+            const std = JSON.parse(payload)
+
+            const newPayload = {
+                tipo: std.tipo,
+                ano: std.ano,
+                mes: std.mes,
+                arquivo: std.arquivo
+            };
+            
+            this.headers = [
+                `Authorization: ${this.token}`,
+                "Content-Type: multipart/form-data",
+                "Accept: application/json"
+            ];
+
+            return this.send("POST", route, newPayload)
+
+        }
+
+    */
+
+}
