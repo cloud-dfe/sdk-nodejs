@@ -40,7 +40,7 @@ export default class HttpAxios {
         console.log(this.token, "e")
     }
 
-    async send(method: string, route: string, payload: any = null): Promise<any> {
+    async request(method: string, route: string, payload: any = null): Promise<any> {
         try {
 
             const response: AxiosResponse = await axios({
@@ -66,28 +66,31 @@ export default class HttpAxios {
         }
     }
 
-    /* 
-        async sendMultipart(route:string, payload:string){
+    async send(route:string, payload:object){
+        
+        return this.request('POST', route, JSON.stringify(payload));
+    }
 
-            const std = JSON.parse(payload)
+    async sendMultipart(route:string, payload:object){
 
-            const newPayload = {
-                tipo: std.tipo,
-                ano: std.ano,
-                mes: std.mes,
-                arquivo: std.arquivo
-            };
+        const FormData = require('form-data');
+        const fs = require('fs');
+
+        let data = new FormData();
+        data.append('arquivo', fs.createReadStream(payload.arquivo));
+        data.append('tipo', payload.tipo);
+        data.append('ano', payload.ano);
+        data.append('mes', payload.mes);
             
-            this.headers = [
-                `Authorization: ${this.token}`,
-                "Content-Type: multipart/form-data",
-                "Accept: application/json"
-            ];
+        this.headers = [
+            `Authorization: ${this.token}`,
+            "Content-Type: multipart/form-data",
+            "Accept: application/json"
+        ];
 
-            return this.send("POST", route, newPayload)
+        return this.request("POST", route, data)
 
-        }
+    }
 
-    */
 
 }
