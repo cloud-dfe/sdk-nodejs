@@ -19,7 +19,7 @@ export default class Cte extends Base {
         return this.client.send("POST", "/cte", payload);
     }
 
-    public async buysca(payload: any): Promise<any>{
+    public async busca(payload: any): Promise<any>{
         return this.client.send("POST", "/cte/busca", payload);
     }
 
