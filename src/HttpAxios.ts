@@ -1,7 +1,6 @@
 import axios, { AxiosResponse, AxiosError } from 'axios';
 
 export interface ConfigHttpAxios {
-    debug: boolean;
     baseUri: string;
     token: string;
     options: {
@@ -11,17 +10,14 @@ export interface ConfigHttpAxios {
 }
 
 export default class HttpAxios {
-    debug: boolean;
     baseUri: string;
     token: string;
     headers: object;
     options: object;
     timeout: number;
     port: number;
-    error: any;
 
     constructor(config: ConfigHttpAxios){
-        this.debug = config.debug
         this.baseUri = config.baseUri
         this.token = config.token
 
@@ -56,12 +52,17 @@ export default class HttpAxios {
 
         } catch (error: any) {
 
-            if (axios.isAxiosError(error)) {
-                const AxiosError: AxiosError = error;
-                throw new Error(`Falha de comunicação: ${AxiosError.message}`)
+            if (error.response) {
+                return error.response.data
             } else {
-                throw new Error(`Erro inesperado: ${error}`)
+                if (axios.isAxiosError(error)) {
+                    const AxiosError: AxiosError = error;
+                    throw new Error(`Falha de comunicação: ${AxiosError.message}`)
+                } else {
+                    throw new Error(`Erro inesperado: ${error}`)
+                }
             }
+
 
         }
     }
@@ -71,12 +72,12 @@ export default class HttpAxios {
         return this.request('POST', route, JSON.stringify(payload));
     }
 
-    async sendMultipart(route:string, payload:object){
+    async sendMultipart(route:string, payload:any){
 
         const FormData = require('form-data');
         const fs = require('fs');
 
-        let data = new FormData();
+        const data = new FormData();
         data.append('arquivo', fs.createReadStream(payload.arquivo));
         data.append('tipo', payload.tipo);
         data.append('ano', payload.ano);

@@ -1,10 +1,9 @@
 import HttpAxios, { ConfigHttpAxios } from './HttpAxios';
 
-export interface configParams {
+export interface ConfigParams {
     ambiente: number
     token: string
     options: {
-        debug: boolean,
         timeout: number,
         port: number
     }
@@ -14,14 +13,14 @@ const AMBIENTE_PRODUCAO = 1;
 const AMBIENTE_HOMOLOGACAO = 2;
 export default class Client{
     
-    params: configParams
+    params: ConfigParams
     ambiente: number
     token: string
     options: object
     uri: string
     client: HttpAxios
 
-    constructor(params: configParams ) {
+    constructor(params: ConfigParams ) {
 
         this.params = params
 
@@ -45,11 +44,8 @@ export default class Client{
         const fileConfig = JSON.parse(fs.readFileSync("./config.json"));
 
         this.uri = fileConfig.api[this.ambiente]
-
-        const debug = (params.options.debug || false)
         
         const config: ConfigHttpAxios = {
-            debug: debug,
             baseUri: this.uri,
             token: this.token,
             options: this.options
@@ -58,10 +54,10 @@ export default class Client{
         this.client = new HttpAxios(config)
     }
 
-    async send(method: string, route: string, payload:any = []): Promise<any>
+    async send(method: string, route: string, payload:any): Promise<any>
     {
         try{
-            const responseData = await this.client.send(method, route, payload);
+            const responseData = await this.client.request(method, route, payload);
             return responseData;
         } catch (error) {
             throw new Error("Erro ao enviar solicitação HTTP");

@@ -1,6 +1,7 @@
 {
     "api":{
         "1":"https:\/\/api.integranotas.com.br\/v1",
+        "3":"http:\/\/127.0.0.1:5000",
         "2":"https:\/\/hom-api.integranotas.com.br\/v1"
     }
 }
