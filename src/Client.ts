@@ -20,7 +20,7 @@ export default class Client{
     uri: string
     client: HttpAxios
 
-    constructor(params: ConfigParams ) {
+    constructor(params: ConfigParams) {
 
         this.params = params
 
@@ -41,7 +41,7 @@ export default class Client{
         this.options = (params.options || [])
         
         const fs = require("fs")
-        const fileConfig = JSON.parse(fs.readFileSync("./config.json"));
+        const fileConfig = JSON.parse(fs.readFileSync("./src/zconfig.json"));
 
         this.uri = fileConfig.api[this.ambiente]
         
@@ -58,6 +58,16 @@ export default class Client{
     {
         try{
             const responseData = await this.client.request(method, route, payload);
+            return responseData;
+        } catch (error) {
+            throw new Error("Erro ao enviar solicitação HTTP");
+        }
+    }
+
+    async sendMultipart(route: string, payload:any): Promise<any>
+    {
+        try{
+            const responseData = await this.client.sendMultipart(route, payload)
             return responseData;
         } catch (error) {
             throw new Error("Erro ao enviar solicitação HTTP");

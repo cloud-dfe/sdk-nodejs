@@ -1,9 +1,10 @@
-import Averbacao from "../../src/Averbacao";
+import Certificado from "../../src/Certificado";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function atmXml() {
+async function certificadoAtualiza() {
+    
+    try {
 
-    try{
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
             token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOjgsInVzciI6NiwidHAiOjIsImlhdCI6MTU3MjU0NzkyOX0.lTh431ejzV13RybU9Mck2OrgQnofhsePwvZttn3kZig',
@@ -12,27 +13,27 @@ async function atmXml() {
                 port: 443
             }
         }
-        
-        const averbacao = new Averbacao(config);
 
-        const fs = require("fs")
-    
-        const payload  = {
-            "xml": fs.readFileSync("./teste.xml").toString('base64'),
-            "usuario": "login",
-            "senha": "senha",
-            "codigo": "codigo",
-            "chave": ""
-        };
+        const certificado = new Certificado(config)
 
-        const resp = await averbacao.atm(payload)
+        const fs = require('fs');
+
+            const fileBase64 = fs.readFileSync('./expired_certificado.pfx')
+            fileBase64.toString("base64")
+
+        const payload = {
+            certificado: fileBase64,
+            senha: "associacao"
+        }
+
+        const resp = await certificado.atualiza(payload);
 
         console.log(resp)
 
     } catch (error) {
+
         console.error('Ocorreu um erro:', error);
+    
     }
 
 }
-
-atmXml();

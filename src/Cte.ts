@@ -2,8 +2,8 @@ import Base from './Base';
 
 export default class Cte extends Base {
 
-    public async status(payload: any): Promise<any>{
-        return this.client.send("POST", "/cte/status", payload);
+    public async status(): Promise<any>{
+        return this.client.send("POST", "/cte/status", []);
     }
 
     public async consulta(payload: any): Promise<any>{

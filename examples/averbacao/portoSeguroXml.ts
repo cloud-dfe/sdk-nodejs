@@ -1,7 +1,7 @@
 import Averbacao from "../../src/Averbacao";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function atmXml() {
+async function portoSeguroXml() {
 
     try{
         const config = {
@@ -12,20 +12,22 @@ async function atmXml() {
                 port: 443
             }
         }
-        
+
         const averbacao = new Averbacao(config);
 
-        const fs = require("fs")
-    
-        const payload  = {
-            "xml": fs.readFileSync("./teste.xml").toString('base64'),
-            "usuario": "login",
-            "senha": "senha",
-            "codigo": "codigo",
-            "chave": ""
-        };
+        const fs = require('fs');
 
-        const resp = await averbacao.atm(payload)
+        const fileBase64 = fs.readFileSync('./teste.xml')
+        fileBase64.toString("base64")
+
+        const payload = {
+            xml: fileBase64,
+            usuario: "login",
+            senha: "senha",
+            chave: ""
+        }
+
+        const resp = await averbacao.portoSeguro(payload);
 
         console.log(resp)
 
@@ -35,4 +37,4 @@ async function atmXml() {
 
 }
 
-atmXml();
+portoSeguroXml()

@@ -6,7 +6,7 @@ export default class Certificado extends Base {
         return this.client.send("POST", "/certificado", payload);
     }
 
-    public async mostra(payload: any): Promise<any> {
+    public async mostra(): Promise<any> {
         return this.client.send("GET", "/certificado", "[]");        
     }
 

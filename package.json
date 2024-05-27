@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "averbacao-xml": "tsx watch examples/averbacao/atmXml.ts"
+    "atmXml": "tsx watch examples/averbacao/atmXml.ts",
+    "portoSeguroXml": "tsx watch examples/averbacao/portoSeguroXml.ts",
+    "cteCria": "tsx watch examples/cte/cteCria.ts"
   },
   "keywords": [],
   "author": "",
