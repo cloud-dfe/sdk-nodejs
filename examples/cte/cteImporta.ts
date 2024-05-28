@@ -18,8 +18,8 @@ async function cteImporta() {
 
         const fs = require('fs');
 
-            const fileBase64 = fs.readFileSync('./examples/cte/zcertificado.xml')
-            fileBase64.toString("base64")
+        const fileBase64 = fs.readFileSync('./examples/cte/zcertificado.xml')
+        fileBase64.toString("base64")
 
         const payload = {
             xml: fileBase64

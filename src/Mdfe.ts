@@ -10,11 +10,16 @@ export default class Gnre extends Base {
         return this.client.send("POST", "/mdfe/preview", payload);
     }
 
-    public async status(payload: any): Promise<any>{
-        return this.client.send("GET", "/mdfe/status", payload);
+    public async status(): Promise<any>{
+        return this.client.send("GET", "/mdfe/status", []);
     }
 
     public async consulta(payload: any): Promise<any>{
+        const key = this.checkKey(payload)
+        return this.client.send("GET", `/mdfe/${key}`, []);
+    }
+
+    public async busca(payload: any): Promise<any>{
         return this.client.send("POST", "/mdfe/busca", payload);
     }
 
@@ -30,8 +35,8 @@ export default class Gnre extends Base {
         return this.client.send("POST", "/mdfe/condutor", payload);
     }
 
-    public async offline(payload: any): Promise<any>{
-        return this.client.send("GET", "/mdfe/offline", payload);
+    public async offline(): Promise<any>{
+        return this.client.send("GET", "/mdfe/offline", []);
     }
 
     public async pdf(payload: any): Promise<any>{
@@ -47,8 +52,8 @@ export default class Gnre extends Base {
         return this.client.send("POST", "/mdfe/nfe", payload);
     }
 
-    public async abertos(payload: any): Promise<any>{
-        return this.client.send("GET", "/mdfe/abertos", payload);
+    public async abertos(): Promise<any>{
+        return this.client.send("GET", "/mdfe/abertos", []);
     }
 
     public async importa(payload: any): Promise<any>{

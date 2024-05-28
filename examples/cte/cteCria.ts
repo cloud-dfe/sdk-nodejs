@@ -130,7 +130,7 @@ async function cteCria() {
                     chave: chave
                 }
 
-                const respC: any = cte.consulta(payload)
+                const respC = await cte.consulta(payload)
                 
                 if (respC.codigo != 5023) {
                     if (respC.sucesso) {
@@ -155,7 +155,7 @@ async function cteCria() {
                 chave: chave
             }
 
-            const respC: any = cte.consulta(payload)
+            const respC = await cte.consulta(payload)
             
             if (respC.sucesso) {
                 if (respC.codigo == 5023) {

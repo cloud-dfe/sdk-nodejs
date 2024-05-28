@@ -70,8 +70,8 @@ export default class Nfe extends Base {
         return this.client.send("POST", "/nfe/importa", payload);
     }
 
-    public async comprovantes(payload: any): Promise<any>{
-        return this.client.send("POST", "/nfe/comprovantes", payload);
+    public async comprovante(payload: any): Promise<any>{
+        return this.client.send("POST", "/nfe/comprovante", payload);
     }
     
     public async cadastro(payload: any): Promise<any>{

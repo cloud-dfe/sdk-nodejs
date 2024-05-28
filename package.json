@@ -5,7 +5,10 @@
   "scripts": {
     "atmXml": "tsx watch examples/averbacao/atmXml.ts",
     "portoSeguroXml": "tsx watch examples/averbacao/portoSeguroXml.ts",
-    "cteCria": "tsx watch examples/cte/cteCria.ts"
+    "cteCria": "tsx watch examples/cte/cteCria.ts",
+    "dfeBuscaCte": "tsx watch examples/dfe/dfeBuscaCte.ts",
+    "nfceCria": "tsx watch examples/nfce/nfceCria.ts"
+    
   },
   "keywords": [],
   "author": "",

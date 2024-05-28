@@ -10,8 +10,8 @@ export default class Nfce extends Base {
         return this.client.send("POST", "/nfce/preview", payload);
     }
 
-    public async status(payload: any): Promise<any>{
-        return this.client.send("GET", "/nfce/status", payload);
+    public async status(): Promise<any>{
+        return this.client.send("GET", "/nfce/status", []);
     }
 
     public async consulta(payload: any): Promise<any>{
