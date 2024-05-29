@@ -1,7 +1,7 @@
 import Averbacao from "../../src/Averbacao";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function atmXml() {
+export default async function atmXml() {
 
     try{
         const config = {

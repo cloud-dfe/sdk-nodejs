@@ -1,7 +1,7 @@
 import Averbacao from "../../src/Averbacao";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function portoSeguroXml() {
+export default async function portoSeguroXml() {
 
     try{
         const config = {

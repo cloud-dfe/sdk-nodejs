@@ -1,7 +1,7 @@
 import Gnre from "../../src/Gnre";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function gnreConfigUf() {
+export default async function gnreConfigUf() {
 
     try{
 

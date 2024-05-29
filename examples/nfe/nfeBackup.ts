@@ -1,7 +1,7 @@
 import Nfe from "../../src/Nfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function nfeBackup() {
+export default async function nfeBackup() {
 
     try{
 

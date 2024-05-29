@@ -1,7 +1,7 @@
 import Dfe from "../../src/Dfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function dfeDownloadNfe() {
+export default async function dfeDownloadNfe() {
 
     try{
 

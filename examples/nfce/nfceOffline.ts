@@ -1,7 +1,7 @@
 import Nfce from "../../src/Nfce";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function nfceOffline() {
+export default async function nfceOffline() {
 
     try{
 

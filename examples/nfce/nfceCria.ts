@@ -58,7 +58,7 @@ interface Item {
     informacoes_adicionais_item: string;
 }
 
-async function nfceCria() {
+export default async function nfceCria() {
 
     try{
 

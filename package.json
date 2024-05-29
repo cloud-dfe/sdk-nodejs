@@ -7,7 +7,8 @@
     "portoSeguroXml": "tsx watch examples/averbacao/portoSeguroXml.ts",
     "cteCria": "tsx watch examples/cte/cteCria.ts",
     "dfeBuscaCte": "tsx watch examples/dfe/dfeBuscaCte.ts",
-    "nfceCria": "tsx watch examples/nfce/nfceCria.ts"
+    "nfceCria": "tsx watch examples/nfce/nfceCria.ts",
+    "dev": "tsx watch test/index.ts"
     
   },
   "keywords": [],

@@ -41,7 +41,7 @@ export default class Gnre extends Base {
 
     public async pdf(payload: any): Promise<any>{
         const key = this.checkKey(payload)
-        return this.client.send("GET", `/mdfe/${key}`, payload);
+        return this.client.send("GET", `/mdfe/${key}`, []);
     }
 
     public async backup(payload: any): Promise<any>{

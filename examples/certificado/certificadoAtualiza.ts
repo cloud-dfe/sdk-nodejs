@@ -1,7 +1,7 @@
 import Certificado from "../../src/Certificado";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function certificadoAtualiza() {
+export default async function certificadoAtualiza() {
     
     try {
 
@@ -18,7 +18,7 @@ async function certificadoAtualiza() {
 
         const fs = require('fs');
 
-            const fileBase64 = fs.readFileSync('./expired_certificado.pfx')
+            const fileBase64 = fs.readFileSync('./examples/certificado/zcertificado.pfx')
             fileBase64.toString("base64")
 
         const payload = {

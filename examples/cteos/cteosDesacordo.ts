@@ -1,7 +1,7 @@
 import CteOs from "../../src/CteOs";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function cteosDesacordo() {
+export default async function cteosDesacordo() {
 
     try{
 

@@ -1,7 +1,7 @@
 import Mdfe from "../../src/Mdfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function mdfeStatus() {
+export default async function mdfeStatus() {
 
     try{
 

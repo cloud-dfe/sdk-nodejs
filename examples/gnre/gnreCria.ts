@@ -5,7 +5,7 @@ function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function gnreCria() {
+export default async function gnreCria() {
 
     try{
 

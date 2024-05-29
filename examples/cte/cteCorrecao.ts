@@ -1,7 +1,7 @@
 import Cte from "../../src/Cte";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function cteCorrecao() {
+export default async function cteCorrecao() {
 
     try{
 

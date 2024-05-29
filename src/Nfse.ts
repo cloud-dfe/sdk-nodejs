@@ -48,8 +48,8 @@ export default class Nfse extends Base {
         return this.client.send("POST", "/nfse/conflito", payload);
     }
 
-    public async offline(payload: any): Promise<any>{
-        return this.client.send("POST", "/nfse/offline", payload);
+    public async offline(): Promise<any>{
+        return this.client.send("GET", "/nfse/offline", []);
     }
 
     public async resolve(payload: any): Promise<any>{

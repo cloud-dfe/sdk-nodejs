@@ -1,7 +1,7 @@
 import Gnre from "../../src/Gnre";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function gnreConsulta() {
+export default async function gnreConsulta() {
 
     try{
 

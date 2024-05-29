@@ -1,7 +1,7 @@
 import Nfe from "../../src/Nfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function nfeConsultaCadastro() {
+export default async function nfeConsultaCadastro() {
 
     try{
 

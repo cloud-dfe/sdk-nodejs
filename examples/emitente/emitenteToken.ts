@@ -1,7 +1,7 @@
 import Emitente from "../../src/Emitente";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function emitenteMostra() {
+export default async function emitenteToken() {
 
     try{
 
@@ -28,4 +28,4 @@ async function emitenteMostra() {
 
 }
 
-emitenteMostra()
+emitenteToken()

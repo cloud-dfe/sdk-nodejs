@@ -5,7 +5,7 @@ function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function cteCria() {
+export default async function cteCria() {
 
     try{
 

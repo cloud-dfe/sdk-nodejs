@@ -1,7 +1,7 @@
 import Dfe from "../../src/Dfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function dfeBuscaNfes() {
+export default async function dfeBuscaNfes() {
 
     try{
 

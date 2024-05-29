@@ -1,7 +1,7 @@
 import Certificado from "../../src/Certificado";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function certificadoMostra() {
+export default async function certificadoMostra() {
 
     try {
 

@@ -1,7 +1,7 @@
 import Nfce from "../../src/Nfce";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function nfceBusca() {
+export default async function nfceBusca() {
 
     try{
 

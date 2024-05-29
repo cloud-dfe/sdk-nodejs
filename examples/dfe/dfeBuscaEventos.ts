@@ -1,7 +1,7 @@
 import Dfe from "../../src/Dfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-async function dfeBuscaEventos() {
+export default async function dfeBuscaEventos() {
 
     try{
 

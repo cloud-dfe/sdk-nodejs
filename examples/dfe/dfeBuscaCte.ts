@@ -1,7 +1,7 @@
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 import Dfe from "../../src/Dfe";
 
-async function dfeBuscaCte() {
+export default async function dfeBuscaCte() {
 
     try{
 
