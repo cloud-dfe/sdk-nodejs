@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosError } from 'axios';
+import axios, { AxiosResponse, AxiosError } from "axios";
 
 export interface ConfigHttpAxios {
     baseUri: string;
@@ -22,9 +22,9 @@ export default class HttpAxios {
         this.token = config.token
 
         this.headers = {
-            'Authorization': `${config.token}`,
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            "Authorization": `${config.token}`,
+            "Accept": "application/json",
+            "Content-Type": "application/json"
         };
 
         this.options = config.options;
@@ -38,6 +38,8 @@ export default class HttpAxios {
 
     async request(method: string, route: string, payload: any = null): Promise<any> {
         try {
+
+            console.log(`${method} - ${this.baseUri}${route}`)
 
             const response: AxiosResponse = await axios({
                 method: method,
@@ -68,19 +70,19 @@ export default class HttpAxios {
 
     async send(route:string, payload:object){
         
-        return this.request('POST', route, JSON.stringify(payload));
+        return this.request("POST", route, JSON.stringify(payload));
     }
 
     async sendMultipart(route:string, payload:any){
 
-        const FormData = require('form-data');
-        const fs = require('fs');
+        const FormData = require("form-data");
+        const fs = require("fs");
 
         const data = new FormData();
-        data.append('arquivo', fs.createReadStream(payload.arquivo));
-        data.append('tipo', payload.tipo);
-        data.append('ano', payload.ano);
-        data.append('mes', payload.mes);
+        data.append("arquivo", fs.createReadStream(payload.arquivo));
+        data.append("tipo", payload.tipo);
+        data.append("ano", payload.ano);
+        data.append("mes", payload.mes);
             
         this.headers = [
             `Authorization: ${this.token}`,

@@ -1,4 +1,4 @@
-import Base from './Base';
+import Base from "./Base";
 
 export default class Cte extends Base {
 
@@ -13,7 +13,7 @@ export default class Cte extends Base {
 
     public async pdf(payload: any): Promise<any>{
         const key = this.checkKey(payload)
-        return this.client.send('GET', `/cte/pdf/{$key}`, []);
+        return this.client.send("GET", `/cte/pdf/${key}`, []);
     }
 
     public async cria(payload: any): Promise<any>{

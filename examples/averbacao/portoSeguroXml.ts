@@ -6,7 +6,7 @@ export default async function portoSeguroXml() {
     try{
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
-            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOjgsInVzciI6NiwidHAiOjIsImlhdCI6MTU3MjU0NzkyOX0.lTh431ejzV13RybU9Mck2OrgQnofhsePwvZttn3kZig',
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
             options: {
                 timeout: 60,
                 port: 443
@@ -15,9 +15,9 @@ export default async function portoSeguroXml() {
 
         const averbacao = new Averbacao(config);
 
-        const fs = require('fs');
+        const fs = require("fs");
 
-        const fileBase64 = fs.readFileSync('./teste.xml')
+        const fileBase64 = fs.readFileSync("caminho_do_arquivo.xml")
         fileBase64.toString("base64")
 
         const payload = {
@@ -32,7 +32,7 @@ export default async function portoSeguroXml() {
         console.log(resp)
 
     } catch (error) {
-        console.error('Ocorreu um erro:', error);
+        console.error("Ocorreu um erro:", error);
     }
 
 }

@@ -49,7 +49,7 @@ export default class Base{
     }
         
     checkKey(payload: any): string {
-        let key: string = payload.chave.replace(/[^0-9]/g, '');
+        let key: string = payload.chave.replace(/[^0-9]/g, "");
         if (!key || key.length !== 44) {
             throw new Error("A chave deve conter 44 dígitos numéricos");
         }

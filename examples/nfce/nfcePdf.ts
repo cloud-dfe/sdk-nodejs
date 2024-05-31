@@ -7,7 +7,7 @@ export default async function nfceInutiliza() {
 
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
-            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOjcwLCJ1c3IiOiIyIiwidHAiOjIsImlhdCI6MTU4MDkzNzM3MH0.KvSUt2x8qcu4Rtp2XNTOINqR-3c5V8iyITDmLoUF_SE',
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
             options: {
                 timeout: 60,
                 port: 443
@@ -17,7 +17,7 @@ export default async function nfceInutiliza() {
         const nfce = new Nfce(config)
 
         const payload = {
-            chave: '41210622545265000108650010001010051473431120'
+            chave: "41210622545265000108650010001010051473431120"
         };
 
         const resp = await nfce.pdf(payload)
@@ -26,7 +26,7 @@ export default async function nfceInutiliza() {
 
     } catch (error) {
 
-        console.error('Ocorreu um erro:', error);
+        console.error("Ocorreu um erro:", error);
 
     }
 

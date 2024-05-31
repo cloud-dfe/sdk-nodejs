@@ -11,7 +11,7 @@ export default async function cteosCria() {
 
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
-            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOjEyOCwidXNyIjoyLCJ0cCI6MiwiaWF0IjoxNjI0NDgwMDA3fQ.r2H33r0hjWl9jmD97UTgJz_n2QargK0lpJ_vciz_0xY',
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
             options: {
                 timeout: 60,
                 port: 443
@@ -147,7 +147,7 @@ export default async function cteosCria() {
 
     } catch (error) {
 
-        console.error('Ocorreu um erro:', error);
+        console.error("Ocorreu um erro:", error);
 
     }
 

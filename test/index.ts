@@ -30,7 +30,7 @@ import dfeBackup from "../examples/dfe/dfeBackup"
 import dfeBuscaCte from "../examples/dfe/dfeBuscaCte"
 import dfeBuscaEventos from "../examples/dfe/dfeBuscaEventos"
 import dfeBuscaNfe from "../examples/dfe/dfeBuscaNfe"
-import dfeBuscaNfes from "../examples/dfe/dfeBuscaNfse"
+import dfeBuscaNfse from "../examples/dfe/dfeBuscaNfse"
 import dfeDownloadCte from "../examples/dfe/dfeDownloadCte"
 import dfeDownloadNfe from "../examples/dfe/dfeDownloadNfe"
 import dfeDownloadNfse from "../examples/dfe/dfeDownloadNfse"
@@ -66,11 +66,55 @@ import nfceStatus from "../examples/nfce/nfceStatus"
 import nfceSubstitui from "../examples/nfce/nfceSubstitui"
 import nfeBackup from "../examples/nfe/nfeBackup"
 import nfeBusca from "../examples/nfe/nfeBusca"
+import nfeCancela from "../examples/nfe/nfeCancela"
+import nfeComprovanteCancelamento from "../examples/nfe/nfeComprovanteCancelamento"
+import nfeComprovanteInclusao from "../examples/nfe/nfeComprovanteInclusao"
+import nfeConsulta from "../examples/nfe/nfeConsulta"
+import nfeConsultaCadastro from "../examples/nfe/nfeConsultaCadastro"
+import nfeCorrecao from "../examples/nfe/nfeCorrecao"
+import nfeCria from "../examples/nfe/nfeCria"
+import nfeDownload from "../examples/nfe/nfeDownload"
+import nfeEtiqueta from "../examples/nfe/nfeEtiqueta"
+import nfeImporta from "../examples/nfe/nfeImporta"
+import nfeInteressado from "../examples/nfe/nfeInteressado"
+import nfeInutiliza from "../examples/nfe/nfeInutiliza"
+import nfeManifesta from "../examples/nfe/nfeManifesta"
 import nfeRecebidas from "../examples/nfe/nfeRecebidas"
+import nfeStatus from "../examples/nfe/nfeStatus"
+import nfseBackup from "../examples/nfse/nfseBackup"
+import nfseBusca from "../examples/nfse/nfseBusca"
+import nfseCancela from "../examples/nfse/nfseCancela"
+import nfseConflito from "../examples/nfse/nfseConflito"
+import nfseConsulta from "../examples/nfse/nfseConsulta"
+import nfseCria from "../examples/nfse/nfseCria"
+import nfseInfo from "../examples/nfse/nfseInfo"
+import nfseLocaliza from "../examples/nfse/nfseLocaliza"
+import nfseOffline from "../examples/nfse/nfseOffline"
+import nfsePdf from "../examples/nfse/nfsePdf"
+import nfsePreview from "../examples/nfse/nfsePreview"
+import nfseResolve from "../examples/nfse/nfseResolve"
+import nfseSubstitui from "../examples/nfse/nfseSubstitui"
+import softhouseAtualizaEmitente from "../examples/softhouse/softhouseAtualizaEmitente"
+import softhouseCriaEmitente from "../examples/softhouse/softhouseCriaEmitente"
+import softhouseDeletaEmitente from "../examples/softhouse/softhouseDeletaEmitente"
+import softhouseListaEmitente from "../examples/softhouse/softhouseListaEmitente"
+import softhouseMostraEmitente from "../examples/softhouse/softhouseMostraEmitente"
 
 function main() {
+
+    // ESTE ARQUIVO SERVE COMO TESTE SIMULTANEO PARA VARIAS REQUISIÇÕES.
+    // DIGITE NO CONSOLE O COMANDO "npm run test" PARA EXECUTA-LO.
+    // OBS: LEMBRE DE TIRAR OS // DAS FUNÇÕES QUE DESEJA EXECUTAR SIMULTANEAMENTE.
+
+    // CASO QUEIRA TESTAR UMA POR VEZ UTILIZE O COMANDO "npm run [nomeDaFuncao]"
+    // EXEMPLO: npm run atmXml
+
+    //atmXml()
+    //portoSeguroXml()
+
     //certificadoAtualiza()
     //certificadoMostra()
+
     //cteBackup()
     //cteBusca()
     //cteCancela()
@@ -83,6 +127,99 @@ function main() {
     //ctePdf()
     //ctePreview()
     //cteStatus()
+
+    //cteosBackup()
+    //cteosBusca()
+    //cteosCancela()
+    //cteosConsulta()
+    //cteosCorrecao()
+    //cteosCria()
+    //cteosDesacordo()
+    //cteosImporta()
+    //cteosInutiliza()
+    //cteosPdf()
+    //cteosPreview()
+    //cteosStatus()
+
+    //dfeBackup()
+    //dfeBuscaCte()
+    //dfeBuscaEventos()
+    //dfeBuscaNfe()
+    //dfeBuscaNfse()
+    //dfeDownloadCte()
+    //dfeDownloadNfe()
+    //dfeDownloadNfse()
+
+    //emitenteAtualiza()
+    //emitenteMostra()
+    //emitenteToken()
+
+    //gnreConfigUf()
+    //gnreConsulta()
+    //gnreCria()
+    
+    //mdfeAbertos()
+    //mdfeBackup()
+    //mdfeCancela()
+    //mdfeCondutor()
+    //mdfeCria()
+    //mdfeEncerra()
+    //mdfeImporta()
+    //mdfeIncluirNfe()
+    //mdfeOffline()
+    //mdfePdf()
+    //mdfePreview()
+    //mdfeStatus()
+    
+    //nfceBackup()
+    //nfceBusca()
+    //nfceCancela()
+    //nfceConsulta()
+    //nfceCria()
+    //nfceImporta()
+    //nfceInutiliza()
+    //nfceOffline()
+    //nfcePreview()
+    //nfceStatus()
+    //nfceSubstitui()
+    
+    //nfeBackup()
+    //nfeBusca()
+    //nfeCancela()
+    //nfeComprovanteCancela()
+    //nfeComprovanteInclusao()
+    //nfeConsulta()
+    //nfeConsultaCadastro()
+    //nfeCorrecao()
+    //nfeCria()
+    //nfeDownload()
+    //nfeEtiqueta()
+    //nfeImporta()
+    //nfeInteressado()
+    //nfeInutiliza()
+    //nfeManifesta()
+    //nfeRecebidas()
+    //nfeStatus()
+    
+    //nfseBackup()
+    //nfseBusca()
+    //nfseCancela()
+    //nfseConflito()
+    //nfseConsulta()
+    //nfseCria()
+    //nfseInfo()
+    //nfseLocaliza()
+    //nfseOffline()
+    //nfsePdf()
+    //nfsePreview()
+    //nfseResolve()
+    //nfseSubstitui()
+    
+    //softhouseAtualizaEmitente()
+    //softhouseCriaEmitente()
+    //softhouseDeletaEmitente()
+    //softhouseListaEmitente()
+    //softhouseMostraEmitente()
 }
 
 main()

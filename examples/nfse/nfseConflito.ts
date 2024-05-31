@@ -7,7 +7,7 @@ export default async function nfseConflito() {
 
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
-            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOjEyNSwidXNyIjoyLCJ0cCI6MiwiaWF0IjoxNjIzOTQwNjg5fQ.Ag3y6wTmiCFb9LExLcc57WfUnP34kQM8jj2Vx91DZL8',
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
             options: {
                 timeout: 60,
                 port: 443
@@ -16,9 +16,9 @@ export default async function nfseConflito() {
 
         const nfse = new Nfse(config)
 
-        const fs = require('fs');
+        const fs = require("fs");
 
-        const fileBase64 = fs.readFileSync('./examples/nfse/zcertificado.xml')
+        const fileBase64 = fs.readFileSync("caminho_do_arquivo.xml")
         fileBase64.toString("base64")
 
         let payload = {
@@ -32,7 +32,7 @@ export default async function nfseConflito() {
 
     } catch (error) {
 
-        console.error('Ocorreu um erro:', error);
+        console.error("Ocorreu um erro:", error);
 
     }
 

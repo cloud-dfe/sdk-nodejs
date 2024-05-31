@@ -7,7 +7,7 @@ export default async function nfceInutiliza() {
 
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
-            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOjcwLCJ1c3IiOiIyIiwidHAiOjIsImlhdCI6MTU4MDkzNzM3MH0.KvSUt2x8qcu4Rtp2XNTOINqR-3c5V8iyITDmLoUF_SE',
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
             options: {
                 timeout: 60,
                 port: 443
@@ -17,10 +17,10 @@ export default async function nfceInutiliza() {
         const nfce = new Nfce(config)
 
         const payload = {
-            numero_inicial: '101006',
-            numero_final: '101006',
-            serie: '1',
-            justificativa: 'teste de inutilização'
+            numero_inicial: "101006",
+            numero_final: "101006",
+            serie: "1",
+            justificativa: "teste de inutilização"
         };
 
         const resp = await nfce.inutiliza(payload)
@@ -29,7 +29,7 @@ export default async function nfceInutiliza() {
 
     } catch (error) {
 
-        console.error('Ocorreu um erro:', error);
+        console.error("Ocorreu um erro:", error);
 
     }
 

@@ -1,4 +1,4 @@
-import Base from './Base';
+import Base from "./Base";
 
 export default class CteOs extends Base {
 
@@ -17,7 +17,7 @@ export default class CteOs extends Base {
     }
 
     public async cria(payload: any): Promise<any>{
-        return this.client.send("POST", "/cteos/status", payload);
+        return this.client.send("POST", "/cteos", payload);
     }
 
     public async busca(payload: any): Promise<any>{

@@ -1,4 +1,4 @@
-import HttpAxios, { ConfigHttpAxios } from './HttpAxios';
+import HttpAxios, { ConfigHttpAxios } from "./HttpAxios";
 
 export interface ConfigParams {
     ambiente: number

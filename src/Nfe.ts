@@ -1,4 +1,4 @@
-import Base from './Base';
+import Base from "./Base";
 
 export default class Nfe extends Base {
 
@@ -42,7 +42,7 @@ export default class Nfe extends Base {
 
     public async etiqueta(payload: any): Promise<any>{
         const key = this.checkKey(payload)
-        return this.client.send("GET", `/nfe/etiqueta/${key}`, []);
+        return this.client.send("GET", `/nfe/pdf/etiqueta/${key}`, []);
     }
 
     public async manista(payload: any): Promise<any>{

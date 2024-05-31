@@ -1,4 +1,4 @@
-import Base from './Base';
+import Base from "./Base";
 
 export default class Nfce extends Base {
 
@@ -28,7 +28,7 @@ export default class Nfce extends Base {
     }
 
     public async offline(): Promise<any>{
-        return this.client.send("POST", "/nfce/offline", []);
+        return this.client.send("GET", "/nfce/offline", []);
     }
 
     public async inutiliza(payload: any): Promise<any>{
