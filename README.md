@@ -17,8 +17,16 @@ npm i sdk-cloud-dfe
 ## Forma de uso:
 
 ```ts
+
+// Se caso estiver usando o SDK baixado
+
 import Nfe from "../../src/Nfe";
 import { AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "../../src/Base";
+
+// Ou se caso utilize o SDK instalado por npm ou yarn
+
+import { Nfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 
 async function nfeStatus() {
 
