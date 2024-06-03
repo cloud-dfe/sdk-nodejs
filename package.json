@@ -1,8 +1,9 @@
 {
-  "name": "cloud-dfe-sdk",
+  "name": "sdk-cloud-dfe",
   "version": "1.0.0",
   "scripts": {
-    "test": "tsx watch test/index.ts",
+    "build": "tsc -p src/tsconfig.json && move /Y src\\*.js dist\\",
+    "test": "tsx watch test/test.ts",
     "atmXml": "ts-node examples/averbacao/atmXml.ts",
     "portoSeguroXml": "ts-node examples/averbacao/portoSeguroXml.ts",
     "certificadoAtualiza": "ts-node examples/certificado/certificadoAtualiza.ts",
@@ -115,5 +116,9 @@
   },
   "dependencies": {
     "axios": "^1.7.1"
-  }
+  },
+  "files": [
+    "dist/*",
+    "README.md"
+  ]
 }

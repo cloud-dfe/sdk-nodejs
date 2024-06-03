@@ -42,7 +42,7 @@ export default class Client{
         this.options = (params.options || [])
         
         const fs = require("fs")
-        const fileConfig = JSON.parse(fs.readFileSync("./src/zconfig.json"));
+        const fileConfig = JSON.parse(fs.readFileSync("./src/config.json"));
 
         this.uri = fileConfig.api[this.ambiente]
         

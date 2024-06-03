@@ -7,11 +7,11 @@ Este SDK visa simplificar a integração do seu sistema com a nossa API, oferece
 ## Forma de instalação de nosso SDK:
 
 ```
-npm install cloud-dfe-sdk
+npm install sdk-cloud-dfe
 ```
 ou
 ```
-npm i cloud-dfe-sdk
+npm i sdk-cloud-dfe
 ```
 
 ## Forma de uso:
