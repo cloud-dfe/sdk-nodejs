@@ -5,7 +5,8 @@ export interface ConfigParams {
     token: string
     options: {
         timeout: number,
-        port: number
+        port: number,
+        debug?: boolean;
     }
 }
 
@@ -59,6 +60,7 @@ export default class Client{
         try{
             const responseData = await this.client.request(method, route, payload);
             return responseData;
+
         } catch (error) {
             throw new Error("Erro ao enviar solicitação HTTP");
         }

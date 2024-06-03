@@ -5,7 +5,8 @@ interface ConfigBase {
     token: string
     options: {
         timeout: number,
-        port: number
+        port: number,
+        debug?: boolean
     }
 }
 
@@ -21,10 +22,12 @@ export default class Base{
         const options = {
             "timeout": 60,
             "port": 443,
+            "debug": false
         }
 
         if (!params.options || Object.keys(params.options).length === 0) {
             params.options = {...options}
+            
         }
 
         if (!params.ambiente) {
@@ -40,7 +43,8 @@ export default class Base{
             token: params.token,
             options: {
                 timeout: params.options.timeout,
-                port: params.options.port
+                port: params.options.port,
+                debug: params.options.debug
             }
             }
 

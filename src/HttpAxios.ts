@@ -6,6 +6,7 @@ export interface ConfigHttpAxios {
     options: {
         timeout?: number;
         port?: number;
+        debug?: boolean;
     };
 }
 
@@ -16,6 +17,7 @@ export default class HttpAxios {
     options: object;
     timeout: number;
     port: number;
+    debug: boolean;
 
     constructor(config: ConfigHttpAxios){
         this.baseUri = config.baseUri
@@ -30,16 +32,12 @@ export default class HttpAxios {
         this.options = config.options;
         this.timeout = (config.options.timeout || 60) * 1000
         this.port = (config.options.port || 443)
-    }
+        this.debug = (config.options.debug || false)
 
-    print() {
-        console.log(this.token, "e")
     }
 
     async request(method: string, route: string, payload: any = null): Promise<any> {
         try {
-
-            console.log(`${method} - ${this.baseUri}${route}`)
 
             const response: AxiosResponse = await axios({
                 method: method,
@@ -50,9 +48,17 @@ export default class HttpAxios {
                 data: payload
             });
             
-            return response.data
+            if (this.debug) {
+                console.log(`Método: ${method} - URL:${this.baseUri}${route}`)
+            }
 
+            return response.data
+            
         } catch (error: any) {
+
+            if(this.debug) {
+                console.log(`Método: ${method} - URL:${this.baseUri}${route} - Status Code: ${error.response.status}`)
+            }
 
             if (error.response) {
                 return error.response.data
