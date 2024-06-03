@@ -57,28 +57,28 @@ nfeStatus()
 
 Para saber os detalhes referente ao dados de envio e os retornos consulte nossa documentação [IntegraNotas Documentação](https://integranotas.com.br/doc).
 
-Veja alguns detalhes na pasta de [examples](link).
+Veja alguns detalhes na pasta de [examples](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples).
 
-[classe](link)
+[Averbação](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/averbacao)
 
-[classe](link)
+[Certificado Digital](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/certificadolink)
 
-[classe](link)
+[CT-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/cte)
 
-[classe](link)
+[CT-e OS](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/cteos)
 
-[classe](link)
+[DF-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/dfe)
 
-[classe](link)
+[Emitente](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/emitente)
 
-[classe](link)
+[GNR-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/gnre)
 
-[classe](link)
+[MDF-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/mdfe)
 
-[classe](link)
+[NFC-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/nfce)
 
-[classe](link)
+[NF-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/nfe)
 
-[classe](link)
+[NFS-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/nfse)
 
-[classe](link)
+[SOFTHOUSE](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/softhouse)
