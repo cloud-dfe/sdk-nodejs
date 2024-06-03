@@ -106,8 +106,8 @@
     "softhouseMostraEmitente": "ts-node examples/softhouse/softhouseMostraEmitente.ts"
   },
   "author": "INTEGRA NOTAS",
-  "license": "ISC",
-  "description": "",
+  "license": "LGPL-3.0-or-later, GPL-3.0-or-later, MIT",
+  "description": "SDK para comunicar com API Integra Notas",
   "devDependencies": {
     "@types/node": "^20.12.12",
     "tsx": "^4.10.5",
