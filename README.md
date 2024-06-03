@@ -2,6 +2,8 @@
 
 Este SDK visa simplificar a integração do seu sistema com a nossa API, oferecendo classes com funções pré-definidas para acessar as rotas da API. Isso elimina a necessidade de desenvolver uma aplicação para se comunicar diretamente com a nossa API, tornando o processo mais eficiente e direto.
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
+
 *Nota: Utilizamos a biblioteca Axios para fazer as requisições de nossa API.*
 
 ## Forma de instalação de nosso SDK:
