@@ -57,11 +57,13 @@ nfeStatus()
 
 Para saber os detalhes referente ao dados de envio e os retornos consulte nossa documentação [IntegraNotas Documentação](https://integranotas.com.br/doc).
 
-Veja alguns detalhes na pasta de [examples](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples).
+### Veja alguns exemplos de requisições nos link abaixo:
+
+Para ir a pasta de exemplos [CLIQUE AQUI](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples)
 
 [Averbação](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/averbacao)
 
-[Certificado Digital](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/certificadolink)
+[Certificado Digital](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/certificado)
 
 [CT-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/cte)
 
@@ -81,4 +83,4 @@ Veja alguns detalhes na pasta de [examples](https://github.com/cloud-dfe/sdk-nod
 
 [NFS-e](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/nfse)
 
-[SOFTHOUSE](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/softhouse)
+[Softhouse](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/softhouse)
