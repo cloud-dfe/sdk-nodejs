@@ -57,9 +57,9 @@ nfeStatus()
 
 Para saber os detalhes referente ao dados de envio e os retornos consulte nossa documentação [IntegraNotas Documentação](https://integranotas.com.br/doc).
 
-### Veja alguns exemplos de requisições nos link abaixo:
+### Veja alguns exemplos de consumi de nossa API nos link abaixo:
 
-Para ir a pasta de exemplos [CLIQUE AQUI](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples)
+[Pasta de Examplos](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples)
 
 [Averbação](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/averbacao)
 
