@@ -9,6 +9,10 @@ Este SDK visa simplificar a integração do seu sistema com a nossa API, oferece
 ```
 npm install cloud-dfe-sdk
 ```
+ou
+```
+npm i cloud-dfe-sdk
+```
 
 ## Forma de uso:
 
