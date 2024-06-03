@@ -1,6 +1,9 @@
 import CteOs from "../../src/CteOs";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
+// import { CteOs, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function cteosPdf() {
 
     try{

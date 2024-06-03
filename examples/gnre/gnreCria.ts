@@ -1,6 +1,8 @@
 import Gnre from "../../src/Gnre";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Gnre, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

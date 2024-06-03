@@ -1,6 +1,8 @@
 import Nfe from "../../src/Nfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Nfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function nfeCorrecao() {
 
     try{

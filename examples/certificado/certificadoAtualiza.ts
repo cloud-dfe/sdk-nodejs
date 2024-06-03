@@ -1,6 +1,9 @@
 import Certificado from "../../src/Certificado";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
+// import { Certificado, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function certificadoAtualiza() {
     
     try {

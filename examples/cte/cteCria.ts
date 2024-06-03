@@ -1,6 +1,9 @@
 import Cte from "../../src/Cte";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
+// import { Cte, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

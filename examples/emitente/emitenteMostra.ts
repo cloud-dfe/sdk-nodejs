@@ -1,6 +1,8 @@
 import Emitente from "../../src/Emitente";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Emitente, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function emitenteMostra() {
 
     try{

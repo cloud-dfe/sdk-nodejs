@@ -1,6 +1,8 @@
 import Mdfe from "../../src/Mdfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Mdfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function mdfeImporta() {
 
     try{

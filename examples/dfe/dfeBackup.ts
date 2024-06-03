@@ -1,6 +1,9 @@
 import Dfe from "../../src/Dfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
+// import { Dfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function dfeBackup() {
 
     try{

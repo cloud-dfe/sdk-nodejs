@@ -7,26 +7,25 @@ Este SDK visa simplificar a integração do seu sistema com a nossa API, oferece
 ## Forma de instalação de nosso SDK:
 
 ```
-npm install sdk-cloud-dfe
+npm i sdk-cloud-dfe
 ```
 ou
 ```
-npm i sdk-cloud-dfe
+yarn add sdk-cloud-dfe
 ```
 
 ## Forma de uso:
 
 ```ts
 
-// Se caso estiver usando o SDK baixado
+// Se estiver utilizando o SDK baixado
 
 import Nfe from "../../src/Nfe";
 import { AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "../../src/Base";
 
-// Ou se caso utilize o SDK instalado por npm ou yarn
+// Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
 
 import { Nfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
-
 
 async function nfeStatus() {
 

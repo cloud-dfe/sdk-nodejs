@@ -1,6 +1,8 @@
 import Gnre from "../../src/Gnre";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Gnre, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function gnreConfigUf() {
 
     try{

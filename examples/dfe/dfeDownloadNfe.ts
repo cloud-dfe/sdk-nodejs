@@ -1,6 +1,8 @@
 import Dfe from "../../src/Dfe";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Dfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function dfeDownloadNfe() {
 
     try{

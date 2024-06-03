@@ -1,6 +1,7 @@
 import Nfce from "../../src/Nfce";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Nfce, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
 interface Item {
     numero_item: string;
     codigo_produto: string;

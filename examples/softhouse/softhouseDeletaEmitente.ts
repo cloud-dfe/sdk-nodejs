@@ -1,6 +1,8 @@
 import Softhouse from "../../src/Softhouse";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Softhouse, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function softhouseDeletaEmitente() {
 
     try{

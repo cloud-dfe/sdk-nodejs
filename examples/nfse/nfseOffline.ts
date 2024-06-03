@@ -1,6 +1,8 @@
 import Nfse from "../../src/Nfse";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
+// import { Nfse, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+
 export default async function nfseOffline() {
 
     try{
