@@ -33,8 +33,8 @@ export default class Client{
             throw new Error("O AMBIENTE deve ser 1-PRODUÇÃO ou 2-HOMOLOGAÇÃO.")
         }
 
-        if (!params.token) {
-            throw new Error("O TOKEN é obrigatorio.")
+        if (!params.token || typeof params.token !== "string" || params.token.trim() === "") {
+            throw new Error("O TOKEN é obrigatorio.");
         }
         
         this.ambiente = (params.ambiente || 2)

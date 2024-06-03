@@ -1,6 +1,6 @@
 import Base from "./Base";
 
-export default class Gnre extends Base {
+export default class Mdfe extends Base {
 
     public async cria(payload: any): Promise<any>{
         return this.client.send("POST", "/mdfe", payload);
