@@ -45,10 +45,14 @@ export default class Client{
 
         this.pathConfig = (params.pathConfig || "./src/config.json")
         
-        const fs = require("fs")
-        const fileConfig = JSON.parse(fs.readFileSync(this.pathConfig));
+        try {
+            const fs = require("fs")
+            const fileConfig = JSON.parse(fs.readFileSync(this.pathConfig));
+            this.uri = fileConfig.api[this.ambiente]
+        } catch(error) {
+            throw new Error("Arquivo json não configurado corretamente. Acesse https://github.com/cloud-dfe/sdk-nodejs para obter informações de como configura-lo")
+        }
 
-        this.uri = fileConfig.api[this.ambiente]
         
         const config: ConfigHttpAxios = {
             baseUri: this.uri,

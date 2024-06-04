@@ -68,7 +68,7 @@ async function nfeStatus() {
 nfeStatus()
 ```
 
-## AVISO!!! Quando utilizado o SDK por npm ou yarn configurar um arquivo.json no diretorio do projeto com esse conteúdo:
+### AVISO!!! Quando utilizado o SDK por npm ou yarn configurar um config.json no diretorio do projeto com esse conteúdo:
 
 ```json
     {
