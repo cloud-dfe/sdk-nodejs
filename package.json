@@ -1,8 +1,9 @@
 {
   "name": "sdk-cloud-dfe",
-  "version": "1.0.1",
+  "version": "1.0.6",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc -p src/tsconfig.json && move /Y src\\*.js dist\\",
+    "build": "tsc --declaration",
     "test": "tsx watch test/test.ts",
     "atmXml": "ts-node examples/averbacao/atmXml.ts",
     "portoSeguroXml": "ts-node examples/averbacao/portoSeguroXml.ts",

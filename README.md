@@ -23,21 +23,23 @@ yarn add sdk-cloud-dfe
 import Nfe from "../../src/Nfe";
 import { AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "../../src/Base";
 
-// Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
+// Se estiver utilizando o SDK pelas instalações dos comandos npm ou yarn
 
 import { Nfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
 
 async function nfeStatus() {
 
     try{
-        // DEFINE OS PARAMETROS BASICOS DA CLASSE
+        // DEFINIÇÕES DOS PARAMETROS BASICOS DA CLASSE
 
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
             token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
             options: {
                 timeout: 60,
-                port: 443
+                port: 443,
+            //utilizar quando for utilizar o SDK por npm ou yarn 
+            //configPath: "./src/config.json"
             }
         }
 
@@ -64,6 +66,17 @@ async function nfeStatus() {
 // EXECUTA A FUNCÃO CRIADA
 
 nfeStatus()
+```
+
+## AVISO!!! Quando utilizado o SDK por npm ou yarn configurar um arquivo.json no diretorio do projeto com esse conteúdo:
+
+```json
+    {
+        "api":{
+            "1":"https:\/\/api.integranotas.com.br\/v1",
+            "2":"https:\/\/hom-api.integranotas.com.br\/v1"
+        }
+    }
 ```
 
 Para saber os detalhes referente ao dados de envio e os retornos consulte nossa documentação [IntegraNotas Documentação](https://integranotas.com.br/doc).

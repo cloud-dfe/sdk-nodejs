@@ -18,7 +18,9 @@ export default async function cteCria() {
             options: {
                 timeout: 60,
                 port: 443
-            }
+            },
+            //utilizar quando for utilizar o SDK por npm ou yarn 
+            //configPath: "./src/config.json"
         }
 
         const cte = new Cte(config)

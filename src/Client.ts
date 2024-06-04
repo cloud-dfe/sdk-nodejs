@@ -8,6 +8,7 @@ export interface ConfigParams {
         port: number,
         debug?: boolean;
     }
+    pathConfig?: string
 }
 
 const AMBIENTE_PRODUCAO = 1;
@@ -20,6 +21,7 @@ export default class Client{
     options: object
     uri: string
     client: HttpAxios
+    pathConfig: string
 
     constructor(params: ConfigParams) {
 
@@ -40,9 +42,11 @@ export default class Client{
         this.ambiente = (params.ambiente || 2)
         this.token = (params.token || "")
         this.options = (params.options || [])
+
+        this.pathConfig = (params.pathConfig || "./src/config.json")
         
         const fs = require("fs")
-        const fileConfig = JSON.parse(fs.readFileSync("./src/config.json"));
+        const fileConfig = JSON.parse(fs.readFileSync(this.pathConfig));
 
         this.uri = fileConfig.api[this.ambiente]
         

@@ -14,7 +14,9 @@ export default async function nfceSubstitui() {
                 timeout: 60,
                 port: 443,
                 debug: false
-            }
+            },
+            //utilizar quando for utilizar o SDK por npm ou yarn 
+            //configPath: "./src/config.json"
         }
 
         const nfce = new Nfce(config)
