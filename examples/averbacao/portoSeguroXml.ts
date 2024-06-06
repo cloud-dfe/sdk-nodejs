@@ -29,7 +29,7 @@ export default async function portoSeguroXml() {
             xml: fileBase64,
             usuario: "login",
             senha: "senha",
-            chave: ""
+            chave: "50000000000000000000000000000000000000000000"
         }
 
         const resp = await averbacao.portoSeguro(payload);

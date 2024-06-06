@@ -21,7 +21,7 @@ export default async function mdfeCancela() {
         const mdfe = new Mdfe(config)
 
         const payload = {
-            chave: "41210622545265000108580010000000261812504664",
+            chave: "50000000000000000000000000000000000000000000",
             justificativa: "teste de cancelamento"
         }
 

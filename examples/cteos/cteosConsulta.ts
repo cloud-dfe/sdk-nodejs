@@ -22,7 +22,7 @@ export default async function cteosConsulta() {
         const cteos = new CteOs(config)
 
         const payload = {
-            chave: "41210222545265000108670010001010021121093113"
+            chave: "50000000000000000000000000000000000000000000",
         }
 
         const resp = await cteos.consulta(payload)

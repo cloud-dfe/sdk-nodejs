@@ -21,7 +21,7 @@ export default async function nfceInutiliza() {
         const nfce = new Nfce(config)
 
         const payload = {
-            chave: "41210622545265000108650010001010051473431120"
+            chave: "50000000000000000000000000000000000000000000"
         };
 
         const resp = await nfce.pdf(payload)

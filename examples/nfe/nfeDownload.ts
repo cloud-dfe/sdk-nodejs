@@ -21,7 +21,7 @@ export default async function nfeDownload() {
         const nfe = new Nfe(config)
 
         const payload = {
-            chave: "41210688212113080022550010000025951569566635"
+            chave: "50000000000000000000000000000000000000000000"
         };
 
         const resp = await nfe.download(payload)

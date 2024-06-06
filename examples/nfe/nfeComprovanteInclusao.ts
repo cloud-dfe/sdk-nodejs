@@ -26,7 +26,7 @@ export default async function nfeComprovanteInclusao() {
                 data: "2021-10-12T12:22:33-03:00", // Obrigatório Data e Hora do recebimento. (dhEntrega)
                 imagem: "lUHJvYyB2ZXJzYW....", // Opcional Base64 da imagem capturada do Comprovante de Entrega da nNF-e ou uma string de referência
                 recebedor_documento: "123456789 SSPRJ", // Obrigatório Número do documento de identificação da pessoa que assinou o Comprovante de Entrega da NF-e. (nDoc)
-                recebedor_nome: "Fulano de Tal", // Obrigatório Nome da pessoa que assinou o Comprovante de Entrega da NF-e. (xNome)
+                recebedor_nome: "NOME TESTE", // Obrigatório Nome da pessoa que assinou o Comprovante de Entrega da NF-e. (xNome)
                 coordenadas: { // dados opcionais no caso de cancelamento
                     latitude: -23.628360, // Latitude do ponto de entrega, com 6 decimais. (latGPS)
                     longitude: -46.622109, // Longitude do ponto de entrega, com 6 decimais. (longGPS)

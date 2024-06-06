@@ -21,7 +21,7 @@ export default async function mdfeConsulta() {
         const mdfe = new Mdfe(config)
 
         const payload = {
-            chave: "41210622545265000108580010000000271900303056"
+            chave: "50000000000000000000000000000000000000000000"
         }
 
         const resp = await mdfe.consulta(payload)

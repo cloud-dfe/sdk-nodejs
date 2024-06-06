@@ -22,7 +22,7 @@ export default async function cteCancela() {
         const cte = new Cte(config)
 
         const payload = {
-            chave: "50210613188739000110570010000000661560432035",
+            chave: "50000000000000000000000000000000000000000000",
             justificativa: "teste de cancelamento"
         }
 

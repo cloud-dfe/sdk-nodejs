@@ -44,7 +44,7 @@ export default async function mdfePreview() {
                     codigo_municipio: "5200050",
                     nome_municipio: "Abadia de Goiás",
                     nfes: [
-                        { chave: "41210622545265000108550010001010071485713011" }
+                        { chave: "50000000000000000000000000000000000000000000" }
                     ]
                 }
             ],

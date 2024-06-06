@@ -22,8 +22,8 @@ export default async function nfceSubstitui() {
         const nfce = new Nfce(config)
 
         const payload = {
-            chave: "41210622545265000108650010001010071119056471",
-            chave_referenciada: "41210622545265000108650010001010081409791910",
+            chave: "50000000000000000000000000000000000000000000",
+            chave_referenciada: "50000000000000000000000000000000000000000001",
             justificativa: "teste de substituicao"
         };
 

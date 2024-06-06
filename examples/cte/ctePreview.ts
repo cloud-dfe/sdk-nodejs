@@ -81,7 +81,7 @@ export default async function ctePreview() {
             },
             nfes: [
                 {
-                    chave: "24201001243220000109550010000010611650858974"
+                    chave: "50000000000000000000000000000000000000000000"
                 }
             ],
             modal_rodoviario: {

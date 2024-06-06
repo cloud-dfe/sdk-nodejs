@@ -20,15 +20,18 @@ export default async function atmXml() {
         
         const averbacao = new Averbacao(config);
 
-        const fs = require("fs")
-    
-        const payload  = {
-            "xml": fs.readFileSync("caminho_do_arquivo.xml").toString("base64"),
-            "usuario": "login",
-            "senha": "senha",
-            "codigo": "codigo",
-            "chave": ""
-        };
+        const fs = require("fs");
+
+        const fileBase64 = fs.readFileSync("caminho_do_arquivo.xml")
+        fileBase64.toString("base64")
+
+        const payload = {
+            xml: fileBase64,
+            usuario: "login",
+            senha: "senha",
+            codigo: "codigo",
+            chave: "50000000000000000000000000000000000000000000"
+        }
 
         const resp = await averbacao.atm(payload)
 

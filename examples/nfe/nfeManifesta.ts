@@ -21,7 +21,7 @@ export default async function nfeManifesta() {
         const nfe = new Nfe(config)
 
         const payload = {
-            chave: "41210688212113080022550010000025951569566635",
+            chave: "50000000000000000000000000000000000000000000",
             tipo_evento: "210210"
         };
 

@@ -22,7 +22,7 @@ export default async function cteCorrecao() {
         const cte = new Cte(config)
 
         const payload = {
-            chave: "50210613188739000110570010000000651936467924",
+            chave: "50000000000000000000000000000000000000000000",
             correcoes: {
                 grupo_corrigido: "ide",
                 campo_corrigido: "natOp",

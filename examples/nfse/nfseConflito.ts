@@ -26,7 +26,7 @@ export default async function nfseConflito() {
         fileBase64.toString("base64")
 
         let payload = {
-            chave: "50191213188739000110650010000012151581978542",
+            chave: "50000000000000000000000000000000000000000000",
             xml: fileBase64
         }
 

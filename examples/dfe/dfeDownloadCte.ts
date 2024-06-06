@@ -21,7 +21,7 @@ export default async function dfeDownloadCte() {
         const dfe = new Dfe(config)
 
         const payload = {
-            chave: "41190806338788000127570010000010011537233885"
+            chave: "50000000000000000000000000000000000000000000"
         }
 
         const resp = await dfe.downloadCte(payload)

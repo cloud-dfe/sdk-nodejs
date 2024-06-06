@@ -45,7 +45,7 @@ export default async function mdfeCria() {
                     nome_municipio: "Abadia de Goiás",
                     nfes: [
                         {
-                            chave: "41210622545265000108550010001010071485713011"
+                            chave: "50000000000000000000000000000000000000000000"
                         }
                     ]
                 }
@@ -72,7 +72,7 @@ export default async function mdfeCria() {
                     uf: "MT",
                     condutores: [
                         {
-                            nome: "JOAO TESTE",
+                            nome: "NOME TESTE",
                             cpf: "01234567890"
                         }
                     ]

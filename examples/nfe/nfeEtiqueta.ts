@@ -21,7 +21,7 @@ export default async function nfeEtiqueta() {
         const nfe = new Nfe(config)
 
         const payload = {
-            chave: "41210422545265000108550010001021041779848390"
+            chave: "50000000000000000000000000000000000000000000"
         };
 
         const resp = await nfe.etiqueta(payload)

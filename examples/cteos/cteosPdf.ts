@@ -22,7 +22,7 @@ export default async function cteosPdf() {
         const cteos = new CteOs(config)
 
         const payload = {
-            chave: "41210222545265000108670010001010031384099675",
+            chave: "50000000000000000000000000000000000000000000",
         }
 
         const resp = await cteos.pdf(payload)

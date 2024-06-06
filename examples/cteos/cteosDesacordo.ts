@@ -22,7 +22,7 @@ export default async function cteosDesacordo() {
         const cteos = new CteOs(config)
 
         const payload = {
-            chave: "50210613188739000110570010000000641214766139",
+            chave: "50000000000000000000000000000000000000000000",
             justificativa: "Não contratei esse serviço"
         }
 

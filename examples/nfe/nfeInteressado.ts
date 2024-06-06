@@ -21,7 +21,7 @@ export default async function nfeInteressado() {
         const nfe = new Nfe(config)
 
         const payload = {
-            chave: "50191213188739000110550010000012151581978542",
+            chave: "50000000000000000000000000000000000000000000",
             tipo_autor: "1",
             permite: true,
             numero_evento: 1,

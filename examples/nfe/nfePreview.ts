@@ -93,7 +93,7 @@ async function nfcePreview() {
             notas_referenciadas: [
               {
                 nfe: {
-                  chave: "50191213188739000110550010000012151581978542"
+                  chave: "50000000000000000000000000000000000000000000"
                 }
               }
             ],

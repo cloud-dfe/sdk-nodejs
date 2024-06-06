@@ -21,12 +21,12 @@ export default async function mdfeIncluirNfe() {
         const mdfe = new Mdfe(config)
 
         const payload = {
-            chave: "41210622545265000108580010000000261812504664",
+            chave: "50000000000000000000000000000000000000000000",
             codigo_municipio_carregamento: "2408003",
             nome_municipio_carregamento: "Mossoró",
             codigo_municipio_descarregamento: "5200050",
             nome_municipio_descarregamento: "Abadia de Goiás",
-            chave_nfe: "34255501343220005109556010100010641225557671"
+            chave_nfe: "50000000000000000000000000000000000000000000"
         };
 
         const resp = await mdfe.nfe(payload)

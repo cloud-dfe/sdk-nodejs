@@ -1,12 +1,12 @@
-import Nfe from "../../src/Nfe";
+import Averbacao from "../../src/Averbacao";
 import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
-// import { Nfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+// Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
+// import { Averbacao, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
 
-export default async function nfePdf() {
+export default async function atmXml() {
 
     try{
-
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
             token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
@@ -17,23 +17,29 @@ export default async function nfePdf() {
             //utilizar quando for utilizar o SDK por npm ou yarn 
             //configPath: "./src/config.json"
         }
+        
+        const averbacao = new Averbacao(config);
 
-        const nfe = new Nfe(config)
+        const fs = require("fs");
+
+        const fileBase64 = fs.readFileSync("caminho_do_arquivo.xml")
+        fileBase64.toString("base64")
 
         const payload = {
+            xml: fileBase64,
+            usuario: "login",
+            senha: "senha",
             chave: "50000000000000000000000000000000000000000000"
-        };
+        }
 
-        const resp = await nfe.pdf(payload)
+        const resp = await averbacao.atmCancela(payload)
 
         console.log(resp)
 
     } catch (error) {
-
         console.error("Ocorreu um erro:", error);
-
     }
 
 }
 
-nfePdf()
+atmXml();

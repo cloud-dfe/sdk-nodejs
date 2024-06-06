@@ -21,7 +21,7 @@ export default async function gnreConsulta() {
         const gnre = new Gnre(config)
 
         const payload = {
-            chave: "50210613188739000110570010000000641214766139"
+            chave: "50000000000000000000000000000000000000000000"
         }
 
         const resp = await gnre.consulta(payload)

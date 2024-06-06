@@ -21,8 +21,8 @@ export default async function mdfeCondutor() {
         const mdfe = new Mdfe(config)
 
         const payload = {
-            chave: "41210622545265000108580010000000261812504664",
-            nome: "JOAO",
+            chave: "50000000000000000000000000000000000000000000",
+            nome: "NOME TESTE",
             cpf: "01234567890"
         }
 

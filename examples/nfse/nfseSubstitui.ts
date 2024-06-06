@@ -21,7 +21,7 @@ export default async function nfseSubstitui() {
         const nfse = new Nfse(config)
 
         const payload = {
-            chave: "35210669184612000188901080000000151508136464",
+            chave: "50000000000000000000000000000000000000000000",
             codigo_cancelamento: "2",
             motivo_cancelamento: "nota emitida com valor errado",
             numero: "1",

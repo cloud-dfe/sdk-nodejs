@@ -21,7 +21,7 @@ export default async function nfseConsulta() {
         const nfse = new Nfse(config)
 
         const payload = {
-            chave: "35210669184612000188901080000000151508136464",
+            chave: "50000000000000000000000000000000000000000000",
         };
 
         const resp = await nfse.consulta(payload)

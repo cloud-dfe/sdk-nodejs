@@ -1,4 +1,4 @@
-# SDK em Node.js para API CloudDFe
+# SDK em Node.js para API Integra Notas
 
 Este SDK visa simplificar a integração do seu sistema com a nossa API, oferecendo classes com funções pré-definidas para acessar as rotas da API. Isso elimina a necessidade de desenvolver uma aplicação para se comunicar diretamente com a nossa API, tornando o processo mais eficiente e direto.
 
@@ -30,7 +30,7 @@ import { Nfe, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist
 async function nfeStatus() {
 
     try{
-        // DEFINIÇÕES DOS PARAMETROS BASICOS DA CLASSE
+         // DEFINIÇÕES DOS PARAMETROS BASICOS
 
         const config = {
             ambiente: AMBIENTE_HOMOLOGACAO,
@@ -79,11 +79,13 @@ nfeStatus()
     }
 ```
 
+### Sobre dados de envio e retornos
+
 Para saber os detalhes referente ao dados de envio e os retornos consulte nossa documentação [IntegraNotas Documentação](https://integranotas.com.br/doc).
 
 ### Veja alguns exemplos de consumi de nossa API nos link abaixo:
 
-[Pasta de Examplos](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples)
+[Pasta de Exemplos](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples)
 
 [Averbação](https://github.com/cloud-dfe/sdk-nodejs/tree/master/examples/averbacao)
 

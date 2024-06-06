@@ -21,7 +21,7 @@ export default async function nfeCancela() {
         const nfe = new Nfe(config)
 
         const payload = {
-            chave: "41210622545265000108550010001010051788162670",
+            chave: "50000000000000000000000000000000000000000000",
             justificativa: "teste de cancelamento"
         };
 
