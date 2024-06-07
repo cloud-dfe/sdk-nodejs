@@ -32,7 +32,7 @@ export default class Nfce extends Base {
     }
 
     public async inutiliza(payload: any): Promise<any>{
-        return this.client.send("POST", "/nfce/busca", payload);
+        return this.client.send("POST", "/nfce/inutiliza", payload);
     }
 
     public async pdf(payload: any): Promise<any>{
