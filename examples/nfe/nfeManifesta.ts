@@ -25,7 +25,7 @@ export default async function nfeManifesta() {
             tipo_evento: "210210"
         };
 
-        const resp = await nfe.manista(payload)
+        const resp = await nfe.manifesta(payload)
 
         console.log(resp)
 

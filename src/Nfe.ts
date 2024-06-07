@@ -45,7 +45,7 @@ export default class Nfe extends Base {
         return this.client.send("GET", `/nfe/pdf/etiqueta/${key}`, []);
     }
 
-    public async manista(payload: any): Promise<any>{
+    public async manifesta(payload: any): Promise<any>{
         return this.client.send("POST", "/nfe/manifesta", payload);
     }
 
