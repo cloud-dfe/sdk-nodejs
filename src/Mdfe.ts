@@ -27,7 +27,7 @@ export default class Mdfe extends Base {
         return this.client.send("POST", "/mdfe/cancela", payload);
     }
 
-    public async encerrra(payload: any): Promise<any>{
+    public async encerra(payload: any): Promise<any>{
         return this.client.send("POST", "/mdfe/encerra", payload);
     }
 
