@@ -45,7 +45,7 @@
     "dfeDownloadNfse": "ts-node examples/dfe/dfeDownloadNfse.ts",
     "emitenteAtualiza": "ts-node examples/emitente/emitenteAtualiza.ts",
     "emitenteMostra": "ts-node examples/emitente/emitenteMostra.ts",
-    "emitenteToken": "ts-node examples/emitente/emitenteToken.ts",
+    "emitenteGerarToken": "ts-node examples/emitente/emitenteGerarToken.ts",
     "gnreConfigUf": "ts-node examples/gnre/gnreConfigUf.ts",
     "gnreConsulta": "ts-node examples/gnre/gnreConsulta.ts",
     "gnreCria": "ts-node examples/gnre/gnreCria.ts",

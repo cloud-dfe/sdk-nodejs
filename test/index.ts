@@ -36,7 +36,7 @@ import dfeDownloadNfe from "../examples/dfe/dfeDownloadNfe"
 import dfeDownloadNfse from "../examples/dfe/dfeDownloadNfse"
 import emitenteAtualiza from "../examples/emitente/emitenteAtualiza"
 import emitenteMostra from "../examples/emitente/emitenteMostra"
-import emitenteToken from "../examples/emitente/emitenteToken"
+import emitenteGerarToken from "../examples/emitente/emitenteGerarToken"
 import gnreConfigUf from "../examples/gnre/gnreConfigUf"
 import gnreConsulta from "../examples/gnre/gnreConsulta"
 import gnreCria from "../examples/gnre/gnreCria"
@@ -153,7 +153,7 @@ function main() {
 
     // emitenteAtualiza()
     // emitenteMostra()
-    // emitenteToken()
+    // emitenteGerarToken()
 
     // gnreConfigUf()
     // gnreConsulta()
