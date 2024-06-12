@@ -13,9 +13,7 @@ export default async function mdfeEncerra() {
             options: {
                 timeout: 60,
                 port: 443
-            },
-            //utilizar quando for utilizar o SDK por npm ou yarn 
-            //configPath: "./src/config.json"
+            }
         }
 
         const mdfe = new Mdfe(config)
@@ -25,7 +23,7 @@ export default async function mdfeEncerra() {
             codigo_municipio: "2408003"
         }
 
-        const resp = await mdfe.encerrra(payload)
+        const resp = await mdfe.encerra(payload)
 
         console.log(resp)
 

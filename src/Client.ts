@@ -1,29 +1,35 @@
 import HttpAxios, { ConfigHttpAxios } from "./HttpAxios";
 
 export interface ConfigParams {
-    ambiente: number
+    ambiente: string
     token: string
     options: {
         timeout: number,
         port: number,
         debug?: boolean;
     }
-    pathConfig?: string
 }
 
-const AMBIENTE_PRODUCAO = 1;
-const AMBIENTE_HOMOLOGACAO = 2;
+const AMBIENTE_PRODUCAO = "1";
+const AMBIENTE_HOMOLOGACAO = "2";
+
+const URI: { [key: string]: { [key: string]: string } } = {
+    "api": {
+        "1": "https://api.integranotas.com.br/v1",
+        "2": "https://hom-api.integranotas.com.br/v1"
+    }
+};
 export default class Client{
     
     params: ConfigParams
-    ambiente: number
+    ambiente: string
     token: string
     options: object
     uri: string
     client: HttpAxios
-    pathConfig: string
+    direction: string
 
-    constructor(params: ConfigParams) {
+    constructor(params: ConfigParams, direction?: string) {
 
         this.params = params
 
@@ -39,19 +45,13 @@ export default class Client{
             throw new Error("O TOKEN é obrigatorio.");
         }
         
-        this.ambiente = (params.ambiente || 2)
+        this.ambiente = (params.ambiente || "2")
         this.token = (params.token || "")
         this.options = (params.options || [])
-
-        this.pathConfig = (params.pathConfig || "./src/config.json")
         
-        try {
-            const fs = require("fs")
-            const fileConfig = JSON.parse(fs.readFileSync(this.pathConfig));
-            this.uri = fileConfig.api[this.ambiente]
-        } catch(error) {
-            throw new Error("Arquivo json não configurado corretamente. Acesse https://github.com/cloud-dfe/sdk-nodejs para obter informações de como configura-lo")
-        }
+        
+        this.direction = (direction || "api")
+        this.uri = URI[this.direction][this.ambiente]
 
         
         const config: ConfigHttpAxios = {

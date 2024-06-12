@@ -1,7 +1,7 @@
 import Client, { ConfigParams } from "./Client"
 
 interface ConfigBase {
-    ambiente: number,
+    ambiente: string,
     token: string
     options: {
         timeout: number,
@@ -10,14 +10,14 @@ interface ConfigBase {
     }
 }
 
-export const AMBIENTE_PRODUCAO = 1;
-export const AMBIENTE_HOMOLOGACAO = 2;
+export const AMBIENTE_PRODUCAO = "1";
+export const AMBIENTE_HOMOLOGACAO = "2";
 
 export default class Base{
      
     client: Client
 
-    constructor(params: ConfigBase) {
+    constructor(params: ConfigBase, direction?: string) {
 
         const options = {
             "timeout": 60,
@@ -48,7 +48,7 @@ export default class Base{
             }
             }
 
-        this.client = new Client(config)
+        this.client = new Client(config, direction)
     
     }
         

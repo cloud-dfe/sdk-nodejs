@@ -38,8 +38,6 @@ async function nfeStatus() {
             options: {
                 timeout: 60,
                 port: 443,
-            //utilizar quando for utilizar o SDK por npm ou yarn 
-            //configPath: "./src/config.json"
             }
         }
 
@@ -66,17 +64,6 @@ async function nfeStatus() {
 // EXECUTA A FUNCÃO CRIADA
 
 nfeStatus()
-```
-
-### AVISO!!! Quando utilizado o SDK por npm ou yarn configurar um config.json no diretorio do projeto com esse conteúdo:
-
-```json
-    {
-        "api":{
-            "1":"https:\/\/api.integranotas.com.br\/v1",
-            "2":"https:\/\/hom-api.integranotas.com.br\/v1"
-        }
-    }
 ```
 
 ### Sobre dados de envio e retornos
