@@ -1,6 +1,6 @@
 {
   "name": "sdk-cloud-dfe",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --declaration",
@@ -107,7 +107,10 @@
     "softhouseCriaEmitente": "ts-node examples/softhouse/softhouseCriaEmitente.ts",
     "softhouseDeletaEmitente": "ts-node examples/softhouse/softhouseDeletaEmitente.ts",
     "softhouseListaEmitente": "ts-node examples/softhouse/softhouseListaEmitente.ts",
-    "softhouseMostraEmitente": "ts-node examples/softhouse/softhouseMostraEmitente.ts"
+    "softhouseMostraEmitente": "ts-node examples/softhouse/softhouseMostraEmitente.ts",
+    "decode": "ts-node examples/utils/decode.ts",
+    "encode": "ts-node examples/utils/encode.ts",
+    "lerArquivo": "ts-node examples/utils/lerArquivo.ts"
   },
   "author": "INTEGRA NOTAS",
   "license": "LGPL-3.0-or-later, GPL-3.0-or-later, MIT",

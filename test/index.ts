@@ -100,6 +100,9 @@ import softhouseCriaEmitente from "../examples/softhouse/softhouseCriaEmitente"
 import softhouseDeletaEmitente from "../examples/softhouse/softhouseDeletaEmitente"
 import softhouseListaEmitente from "../examples/softhouse/softhouseListaEmitente"
 import softhouseMostraEmitente from "../examples/softhouse/softhouseMostraEmitente"
+import decode from "../examples/utils/decode"
+import encode from "../examples/utils/encode"
+import lerArquivo from "../examples/utils/lerArquivo"
 
 function main() {
 
@@ -109,6 +112,10 @@ function main() {
 
     // CASO QUEIRA TESTAR UMA POR VEZ UTILIZE O COMANDO "npm run [nomeDaFuncao]"
     // EXEMPLO: npm run atmXml
+
+    // decode()
+    // encode()
+    // lerArquivo()
 
     // atmXml()
     // portoSeguroXml()
@@ -222,6 +229,7 @@ function main() {
     // softhouseDeletaEmitente()
     // softhouseListaEmitente()
     // softhouseMostraEmitente()
+
 }
 
 main()
