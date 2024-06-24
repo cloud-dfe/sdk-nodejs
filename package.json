@@ -1,6 +1,6 @@
 {
   "name": "sdk-cloud-dfe",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --declaration",
@@ -73,6 +73,15 @@
     "nfcePreview": "ts-node examples/nfce/nfcePreview.ts",
     "nfceStatus": "ts-node examples/nfce/nfceStatus.ts",
     "nfceSubstitui": "ts-node examples/nfce/nfceSubstitui.ts",
+    "nfcomBackup": "ts-node examples/nfcom/nfcomBackup.ts",
+    "nfcomBusca": "ts-node examples/nfcom/nfcomBusca.ts",
+    "nfcomCancela": "ts-node examples/nfcom/nfcomCancela.ts",
+    "nfcomConsulta": "ts-node examples/nfcom/nfcomConsulta.ts",
+    "nfcomCria": "ts-node examples/nfcom/nfcomCria.ts",
+    "nfcomImporta": "ts-node examples/nfcom/nfcomImporta.ts",
+    "nfcomPdf": "ts-node examples/nfcom/nfcomPdf.ts",
+    "nfcomPreview": "ts-node examples/nfcom/nfcomPreview.ts",
+    "nfcomStatus": "ts-node examples/nfcom/nfcomStatus.ts",
     "nfeBackup": "ts-node examples/nfe/nfeBackup.ts",
     "nfeBusca": "ts-node examples/nfe/nfeBusca.ts",
     "nfeCancela": "ts-node examples/nfe/nfeCancela.ts",

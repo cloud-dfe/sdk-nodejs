@@ -65,6 +65,15 @@ import nfcePdf from "../examples/nfce/nfcePdf"
 import nfcePreview from "../examples/nfce/nfcePreview"
 import nfceStatus from "../examples/nfce/nfceStatus"
 import nfceSubstitui from "../examples/nfce/nfceSubstitui"
+import nfcomBackup from "../examples/nfcom/nfcomBackup"
+import nfcomBusca from "../examples/nfcom/nfcomBusca"
+import nfcomCancela from "../examples/nfcom/nfcomCancela"
+import nfcomConsulta from "../examples/nfcom/nfcomConsulta"
+import nfcomCria from "../examples/nfcom/nfcomCria"
+import nfcomImporta from "../examples/nfcom/nfcomImporta"
+import nfcomPdf from "../examples/nfcom/nfcomPdf"
+import nfcomPreview from "../examples/nfcom/nfcomPreview"
+import nfcomStatus from "../examples/nfcom/nfcomStatus"
 import nfeBackup from "../examples/nfe/nfeBackup"
 import nfeBusca from "../examples/nfe/nfeBusca"
 import nfeCancela from "../examples/nfe/nfeCancela"
@@ -103,6 +112,7 @@ import softhouseMostraEmitente from "../examples/softhouse/softhouseMostraEmiten
 import decode from "../examples/utils/decode"
 import encode from "../examples/utils/encode"
 import lerArquivo from "../examples/utils/lerArquivo"
+import nfcomInutiliza from "../examples/nfcom/nfcomPdf"
 
 function main() {
 
@@ -191,6 +201,16 @@ function main() {
     // nfcePreview()
     // nfceStatus()
     // nfceSubstitui()
+
+    // nfcomBackup()
+    // nfcomBusca()
+    // nfcomCancela()
+    // nfcomConsulta()
+    // nfcomCria()
+    // nfcomImporta()
+    // nfcomPdf()
+    // nfcomPreview()
+    // nfcomStatus()
     
     // nfeBackup()
     // nfeBusca()
