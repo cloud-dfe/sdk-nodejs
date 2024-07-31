@@ -57,7 +57,7 @@ interface Item {
     valor_frete: number;
     valor_seguro: number;
     valor_outras_despesas: number;
-    informacoes_adicionais_item: string;
+    informacoes_adicionais: string;
 }
 
 function sleep(ms: number): Promise<void> {
@@ -212,7 +212,7 @@ export default async function nfeCria() {
                 valor_frete: 0,
                 valor_seguro: 0,
                 valor_outras_despesas: 0,
-                informacoes_adicionais_item: "Valor aproximado tributos R$: 9,43 (4,20%) Fonte: IBPT"
+                informacoes_adicionais: "Valor aproximado tributos R$: 9,43 (4,20%) Fonte: IBPT"
             }
         ];
 
