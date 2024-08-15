@@ -1,6 +1,6 @@
 {
   "name": "sdk-cloud-dfe",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --declaration",
@@ -119,7 +119,8 @@
     "softhouseMostraEmitente": "ts-node examples/softhouse/softhouseMostraEmitente.ts",
     "decode": "ts-node examples/utils/decode.ts",
     "encode": "ts-node examples/utils/encode.ts",
-    "lerArquivo": "ts-node examples/utils/lerArquivo.ts"
+    "lerArquivo": "ts-node examples/utils/lerArquivo.ts",
+    "validarWebhook": "ts-node examples/webhook/validate.ts"
   },
   "author": "INTEGRA NOTAS",
   "license": "LGPL-3.0-or-later, GPL-3.0-or-later, MIT",

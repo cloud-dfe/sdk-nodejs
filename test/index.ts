@@ -112,7 +112,7 @@ import softhouseMostraEmitente from "../examples/softhouse/softhouseMostraEmiten
 import decode from "../examples/utils/decode"
 import encode from "../examples/utils/encode"
 import lerArquivo from "../examples/utils/lerArquivo"
-import nfcomInutiliza from "../examples/nfcom/nfcomPdf"
+import validate from "../examples/webhook/validate"
 
 function main() {
 
@@ -249,6 +249,8 @@ function main() {
     // softhouseDeletaEmitente()
     // softhouseListaEmitente()
     // softhouseMostraEmitente()
+
+    // validate()
 
 }
 

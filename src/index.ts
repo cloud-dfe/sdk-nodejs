@@ -13,5 +13,6 @@ import Nfe from "./Nfe";
 import Nfse from "./Nfse";
 import Softhouse from "./Softhouse";
 import Util from "./Util";
+import Webhook from "./Webhook";
 
-export { Averbacao, Certificado, Cte, CteOs, Dfe, Emitente, Gnre, Mdfe, Nfce, Nfcom, Nfe, Nfse, Softhouse, Util, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO }
+export { Averbacao, Certificado, Cte, CteOs, Dfe, Emitente, Gnre, Mdfe, Nfce, Nfcom, Nfe, Nfse, Softhouse, Util, Webhook, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO }
