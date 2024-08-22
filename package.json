@@ -120,7 +120,7 @@
     "decode": "ts-node examples/utils/decode.ts",
     "encode": "ts-node examples/utils/encode.ts",
     "lerArquivo": "ts-node examples/utils/lerArquivo.ts",
-    "validarWebhook": "ts-node examples/webhook/validate.ts"
+    "isvalid": "ts-node examples/webhook/isValid.ts"
   },
   "author": "INTEGRA NOTAS",
   "license": "LGPL-3.0-or-later, GPL-3.0-or-later, MIT",

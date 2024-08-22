@@ -1,6 +1,6 @@
 import Webhook from "../../src/Webhook";
 
-export default function validate() {
+export default function isValid() {
 
     // * Este exemplo de verificação da assinatura dos dados enviados via webhook
     // *
@@ -21,7 +21,11 @@ export default function validate() {
     // payload do webhook em JSON (https://doc.cloud-dfe.com.br/webhook)
     const payload = '{"origem": "TESTE", "cnpj_cpf": "12345678000123", "signature": "tBQrTEui9FxaU7AdFbqPaveg3tBPZ1RjKj3Ytn15fm10/AYIztE6ST+YvLuLu6ea8PUrefX4SpxcT1K8LK40fQ=="}';
 
-    return Webhook.isValid(token, payload);
+    const resp = Webhook.isValid(token, payload);
+
+    if (resp) {
+        console.log("Assinatura válida");
+    }
 
     } catch (e: any) {
         console.error(e.message);
@@ -29,4 +33,4 @@ export default function validate() {
 
 }
 
-validate();
+isValid();
