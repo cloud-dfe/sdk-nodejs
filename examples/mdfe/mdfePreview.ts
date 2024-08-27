@@ -70,7 +70,7 @@ export default async function mdfePreview() {
                         { nome: "JOAO TESTE", cpf: "01234567890" }
                     ]
                 },
-                reboque: []
+                reboques: []
             }
         };
 
