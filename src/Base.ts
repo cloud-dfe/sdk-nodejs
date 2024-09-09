@@ -1,7 +1,7 @@
 import Client, { ConfigParams } from "./Client"
 
 interface ConfigBase {
-    ambiente: string,
+    ambiente: number,
     token: string
     options: {
         timeout: number,
@@ -9,9 +9,6 @@ interface ConfigBase {
         debug?: boolean
     }
 }
-
-export const AMBIENTE_PRODUCAO = "1";
-export const AMBIENTE_HOMOLOGACAO = "2";
 
 export default class Base{
      
@@ -31,10 +28,10 @@ export default class Base{
         }
 
         if (!params.ambiente) {
-            params.ambiente = AMBIENTE_HOMOLOGACAO
+            params.ambiente = 2
         }
 
-        if (params.ambiente !== AMBIENTE_HOMOLOGACAO && params.ambiente !== AMBIENTE_PRODUCAO) {
+        if (params.ambiente !== 1 && params.ambiente !== 2) {
             throw new Error("O AMBIENTE deve ser 1-PRODUÇÃO ou 2-HOMOLOGAÇÃO.")
         }
 

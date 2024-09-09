@@ -1,5 +1,4 @@
 import Averbacao from "../../src/Averbacao";
-import { AMBIENTE_HOMOLOGACAO } from "../../src/Base";
 
 // Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
 // import { Averbacao, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
@@ -8,7 +7,7 @@ export default async function atmXml() {
 
     try{
         const config = {
-            ambiente: AMBIENTE_HOMOLOGACAO,
+            ambiente: 2,
             token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbXAiOiJ0b2tlbl9leGVtcGxvIiwidXNyIjoidGsiLCJ0cCI6InRrIn0.Tva_viCMCeG3nkRYmi_RcJ6BtSzui60kdzIsuq5X-sQ",
             options: {
                 timeout: 60,

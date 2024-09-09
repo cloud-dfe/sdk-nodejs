@@ -1,7 +1,7 @@
 import HttpAxios, { ConfigHttpAxios } from "./HttpAxios";
 
 export interface ConfigParams {
-    ambiente: string
+    ambiente: number
     token: string
     options: {
         timeout: number,
@@ -10,19 +10,16 @@ export interface ConfigParams {
     }
 }
 
-const AMBIENTE_PRODUCAO = "1";
-const AMBIENTE_HOMOLOGACAO = "2";
-
 const URI: { [key: string]: { [key: string]: string } } = {
     "api": {
-        "1": "https://api.integranotas.com.br/v1",
-        "2": "https://hom-api.integranotas.com.br/v1"
+        1: "https://api.integranotas.com.br/v1",
+        2: "https://hom-api.integranotas.com.br/v1"
     }
 };
 export default class Client{
     
     params: ConfigParams
-    ambiente: string
+    ambiente: number
     token: string
     options: object
     uri: string
@@ -37,7 +34,7 @@ export default class Client{
             throw new Error("Devem ser passados os parametros básicos.")
         }
 
-        if (params.ambiente !== AMBIENTE_HOMOLOGACAO && params.ambiente !== AMBIENTE_PRODUCAO) {
+        if (params.ambiente !== 1 && params.ambiente !== 2) {
             throw new Error("O AMBIENTE deve ser 1-PRODUÇÃO ou 2-HOMOLOGAÇÃO.")
         }
 
@@ -45,7 +42,7 @@ export default class Client{
             throw new Error("O TOKEN é obrigatorio.");
         }
         
-        this.ambiente = (params.ambiente || "2")
+        this.ambiente = (params.ambiente || 2)
         this.token = (params.token || "")
         this.options = (params.options || [])
         
