@@ -174,13 +174,19 @@ export default async function nfcomCria() {
 
             const respC = await nfcom.consulta(payload)
 
-            if (respC.sucesso) {
-                if (respC.codigo = 5023) {
+            if (respC.codigo != 5023) {
+                if (respC.sucesso) {
                     console.log(respC)
+                    return respC
+                } else {
+                    console.log(respC)
+                    return respC
                 }
             } else {
                 console.log(respC)
+                return respC
             }
+            
         } else {
             console.log(resp)
         }

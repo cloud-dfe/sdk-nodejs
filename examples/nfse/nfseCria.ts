@@ -4,6 +4,10 @@ import Nfse from "../../src/Nfse";
 
 export default async function nfseCria() {
 
+    function sleep(ms: number): Promise<void> {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     try{
 
         const config = {
@@ -69,6 +73,61 @@ export default async function nfseCria() {
         const resp = await nfse.cria(payload)
 
         console.log(resp)
+
+        if (resp.sucesso) {
+            const chave = resp.chave
+            await sleep(5000)
+            
+            let tentativa = 1
+
+            while (tentativa <= 5) {
+                const payload = {
+                    chave: chave
+                }
+
+                const respC = await nfse.consulta(payload)
+                if (respC.codigo != 5023) {
+                    if (respC.sucesso) {
+                        console.log(respC)
+                        break
+                    } else {
+                        console.log(respC)
+                        break
+                    }
+                }
+                await sleep(5000)
+                tentativa++
+            }
+
+        } else if ([5001, 5002].includes(resp.codigo)) {
+            console.log(resp.erros)
+        } else if (resp.codigo == 5008) {
+            const chave = resp.chave
+
+            console.log(resp)
+
+            const payload = {
+                chave: chave
+            }
+
+            const respC = await nfse.consulta(payload)
+
+            if (respC.codigo != 5023) {
+                if (respC.sucesso) {
+                    console.log(respC)
+                    return respC
+                } else {
+                    console.log(respC)
+                    return respC
+                }
+            } else {
+                console.log(respC)
+                return respC
+            }
+
+        } else {
+            console.log(resp)
+        }
 
     } catch (error) {
 

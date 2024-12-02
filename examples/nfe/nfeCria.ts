@@ -250,7 +250,7 @@ export default async function nfeCria() {
 
         } else if ([5001, 5002].includes(resp.codigo)) {
             console.log(resp.erros)
-        } else if (resp.codigo == 5008 || resp.codigo >= 7000) {
+        } else if (resp.codigo == 5008) {
             const chave = resp.chave
 
             console.log(resp)
@@ -261,13 +261,19 @@ export default async function nfeCria() {
 
             const respC = await nfe.consulta(payload)
 
-            if (respC.sucesso) {
-                if (respC.codigo = 5023) {
+            if (respC.codigo != 5023) {
+                if (respC.sucesso) {
                     console.log(respC)
+                    return respC
+                } else {
+                    console.log(respC)
+                    return respC
                 }
             } else {
                 console.log(respC)
+                return respC
             }
+
         } else {
             console.log(resp)
         }
