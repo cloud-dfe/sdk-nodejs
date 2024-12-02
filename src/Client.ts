@@ -1,84 +1,106 @@
-import HttpAxios, { ConfigHttpAxios } from "./HttpAxios";
+import Services, { ConfigServices } from "./Services";
 
-export interface ConfigParams {
-    ambiente: number
+export interface ConfigClient {
     token: string
-    options: {
-        timeout: number,
-        port: number,
+    ambiente: number
+    timeout?: number
+    port?: number
+    debug?: boolean
+    options?: {
+        timeout?: number,
+        port?: number,
         debug?: boolean;
     }
 }
 
-const URI: { [key: string]: { [key: string]: string } } = {
+const URI: { [key: string]: { [key: number]: string } } = {
     "api": {
         1: "https://api.integranotas.com.br/v1",
         2: "https://hom-api.integranotas.com.br/v1"
     }
-};
-export default class Client{
-    
-    params: ConfigParams
-    ambiente: number
+}; 
+
+export default class Client {
+
     token: string
-    options: object
-    uri: string
-    client: HttpAxios
-    direction: string
+    ambiente: number
+    timeout: number
+    port: number
+    debug: boolean
 
-    constructor(params: ConfigParams, direction?: string) {
+    services: Services
 
-        this.params = params
+    constructor(config: ConfigClient) {
 
-        if (!params) {
+        if (!config) {
             throw new Error("Devem ser passados os parametros básicos.")
         }
 
-        if (params.ambiente !== 1 && params.ambiente !== 2) {
+        if (config.ambiente !== 1 && config.ambiente !== 2) {
             throw new Error("O AMBIENTE deve ser 1-PRODUÇÃO ou 2-HOMOLOGAÇÃO.")
         }
 
-        if (!params.token || typeof params.token !== "string" || params.token.trim() === "") {
+        if (!config.token || typeof config.token !== "string" || config.token.trim() === "") {
             throw new Error("O TOKEN é obrigatorio.");
         }
         
-        this.ambiente = (params.ambiente || 2)
-        this.token = (params.token || "")
-        this.options = (params.options || [])
-        
-        
-        this.direction = (direction || "api")
-        this.uri = URI[this.direction][this.ambiente]
+        this.ambiente = config.ambiente
+        this.token = config.token
+        this.timeout = (config.timeout || 60) * 1000
+        this.port = (config.port || 443)
+        this.debug = (config.debug || false)
 
-        
-        const config: ConfigHttpAxios = {
-            baseUri: this.uri,
-            token: this.token,
-            options: this.options
-        };
+        if (config.options) {
+            this.timeout = config.options.timeout ?? this.timeout;
+            this.port = config.options.port ?? this.port;
+            this.debug = config.options.debug ?? this.debug;
+        }
 
-        this.client = new HttpAxios(config)
+        const configServices: ConfigServices = {
+            baseUri: URI["api"][this.ambiente],
+            timeout: this.timeout,
+            port: this.port,
+            debug: this.debug,
+        }
+
+        this.services = new Services(configServices)
+
     }
 
-    async send(method: string, route: string, payload:any): Promise<any>
+    async send(method: string, url: string, data?: any): Promise<any>
     {
         try{
-            const responseData = await this.client.request(method, route, payload);
-            return responseData;
 
+            const headers = {
+                "Authorization": `${this.token}`,
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            };
+
+            const responseData = await this.services.request(method, url, data, headers);
+            return responseData;
         } catch (error) {
             throw new Error("Erro ao enviar solicitação HTTP");
         }
+        
     }
 
-    async sendMultipart(route: string, payload:any): Promise<any>
+    async sendMultipart(url: string, data?: any): Promise<any>
     {
         try{
-            const responseData = await this.client.sendMultipart(route, payload)
+
+            const headers = [
+                `Authorization: ${this.token}`,
+                "Content-Type: multipart/form-data",
+                "Accept: application/json"
+            ];
+
+            const responseData = await this.services.request("POST", url, data, headers);
             return responseData;
         } catch (error) {
             throw new Error("Erro ao enviar solicitação HTTP");
         }
+        
     }
 
 }
