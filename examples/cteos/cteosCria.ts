@@ -125,7 +125,7 @@ export default async function cteosCria() {
 
         } else if ([5001, 5002].includes(resp.codigo)) {
             console.log(resp.erros)
-        } else if (resp.codigo == 5008 || resp.codigo >= 7000) {
+        } else if (resp.codigo == 5008) {
             const chave = resp.chave
 
             console.log(resp)
