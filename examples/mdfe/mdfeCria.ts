@@ -81,8 +81,39 @@ export default async function mdfeCria() {
         const resp = await mdfe.cria(payload)
 
         console.log(resp)
-        
 
+        if (resp.sucesso) {
+            if (resp.codigo = 2) {
+                // aguarda a chave e consultar/ou esperar o webhook notificar quando for processada pela sefaz
+                console.log(resp)
+            } else {
+                // autorizado
+                console.log(resp)
+            }
+        } else if (resp.codigo == 5001 || resp.codigo == 5002) {
+            // erro nos campos
+            console.log(resp.erros)
+        } else if (resp.codigo == 5008 || resp.codigo >= 7000) {
+            const chave = resp.chave
+
+            const payload = {
+                chave: chave
+            }
+
+            const respC = await mdfe.consulta(payload)
+            if (respC.codigo != 5023) {
+                if (respC.sucesso) {
+                    console.log(respC)
+                } else {
+                    console.log(respC)
+                }
+            } else {
+                console.log(respC)
+            }
+        } else {
+            console.log(resp)
+        }
+        
     } catch (error) {
 
         console.error("Ocorreu um erro:", error);
