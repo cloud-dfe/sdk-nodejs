@@ -159,13 +159,17 @@ export default async function cteCria() {
 
             const respC = await cte.consulta(payload)
             
-            if (respC.sucesso) {
-                if (respC.codigo == 5023) {
+            if (respC.codigo != 5023) {
+                if (respC.sucesso) {
+                    console.log(respC)
+                } else {
                     console.log(respC)
                 }
             } else {
                 console.log(respC)
             }
+
+            
         } else {
             console.log(resp)
         }

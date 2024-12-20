@@ -177,14 +177,11 @@ export default async function nfcomCria() {
             if (respC.codigo != 5023) {
                 if (respC.sucesso) {
                     console.log(respC)
-                    return respC
                 } else {
                     console.log(respC)
-                    return respC
                 }
             } else {
                 console.log(respC)
-                return respC
             }
             
         } else {

@@ -81,6 +81,7 @@ export default async function mdfeCria() {
         const resp = await mdfe.cria(payload)
 
         console.log(resp)
+        
 
     } catch (error) {
 
