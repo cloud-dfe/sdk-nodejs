@@ -1,6 +1,6 @@
 {
   "name": "sdk-cloud-dfe",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --declaration",
@@ -128,7 +128,7 @@
   "devDependencies": {
     "@types/node": "^20.12.12",
     "tsx": "^4.10.5",
-    "typescript": "^5.4.5"
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "axios": "^1.7.1"

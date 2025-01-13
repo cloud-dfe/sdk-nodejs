@@ -78,4 +78,9 @@ export default class Nfe extends Base {
         return this.client.send("POST", "/nfe/cadastro", payload);
     }
 
+    public async simples(payload: any): Promise<any>{
+        const key = this.checkKey(payload)
+        return this.client.send("GET", `/nfe/pdf/${key}`, []);
+    }
+
 }
