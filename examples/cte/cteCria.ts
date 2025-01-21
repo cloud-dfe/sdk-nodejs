@@ -120,30 +120,25 @@ export default async function cteCria() {
         };
 
         const resp: any = await cte.cria(payload)
-
+        
         if (resp.sucesso) {
-            const chave = resp.chave
-            await sleep(5000)
+            await sleep(15000)
+            const payload = {
+                chave: resp.chave
+            }
 
-            let tentativa = 1
-
-            while (tentativa <= 5) {
-                const payload = {
-                    chave: chave
+            const respC = await cte.consulta(payload)
+            if (respC.codigo != 5023) {
+                if (respC.sucesso) {
+                    // autorizado
+                    console.log(respC)
+                } else {
+                    // rejeição
+                    console.log(respC)
                 }
-
-                const respC = await cte.consulta(payload)
-                
-                if (respC.codigo != 5023) {
-                    if (respC.sucesso) {
-                        console.log(respC)
-                        break
-                    } else {
-                        console.log(respC)
-                        break
-                    }
-                }
-                tentativa++
+            } else {
+                // nota em processamento
+                // recomendamos que seja utilizado o metodo de consulta manual ou o webhook
             }
 
         } else if ([5001, 5002].includes(resp.codigo)) {

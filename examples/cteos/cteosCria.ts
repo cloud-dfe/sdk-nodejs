@@ -99,28 +99,23 @@ export default async function cteosCria() {
         console.log(resp)
 
         if (resp.sucesso) {
-            const chave = resp.chave
-            await sleep(5000)
-            
-            let tentativa = 1
+            await sleep(15000)
+            const payload = {
+                chave: resp.chave
+            }
 
-            while (tentativa <= 5) {
-                const payload = {
-                    chave: chave
+            const respC = await cteos.consulta(payload)
+            if (respC.codigo != 5023) {
+                if (respC.sucesso) {
+                    // autorizado
+                    console.log(respC)
+                } else {
+                    // rejeição
+                    console.log(respC)
                 }
-
-                const respC = await cteos.consulta(payload)
-                if (respC.codigo != 5023) {
-                    if (respC.sucesso) {
-                        console.log(respC)
-                        break
-                    } else {
-                        console.log(respC)
-                        break
-                    }
-                }
-                await sleep(5000)
-                tentativa++
+            } else {
+                // nota em processamento
+                // recomendamos que seja utilizado o metodo de consulta manual ou o webhook
             }
 
         } else if ([5001, 5002].includes(resp.codigo)) {
