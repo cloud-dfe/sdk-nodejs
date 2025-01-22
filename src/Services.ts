@@ -59,7 +59,7 @@ export default class Services {
                 this.error.code = AxiosError.code;
                 this.error.message = AxiosError.message;
 
-                throw new Error(`Ocorreu um erro o seguinte erro: ${this.error.message, this.error.code}`);
+                throw new Error(`Ocorreu o seguinte erro: ${this.error.message, this.error.code}`);
             }
 
             throw new Error(`Não foi possível identificar o erro: ${error}`);
