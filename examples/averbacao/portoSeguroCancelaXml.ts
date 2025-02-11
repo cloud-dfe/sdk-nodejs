@@ -3,7 +3,9 @@ import Averbacao from "../../src/Averbacao";
 // Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
 // import { Averbacao, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
 
-export default async function atmCancela() {
+export default async function portoSeguroCancelaXml() {
+
+    // Exemplo de chamada a API usando o SDK
 
     try{
 
@@ -27,8 +29,7 @@ export default async function atmCancela() {
 
         const averbacao = new Averbacao(config);
 
-        // Conversão de um arquivo XML do caminho especificado (caminho_do_arquivo.xml), 
-        // para uma string codificada em base64.
+        // Conversão de um arquivo XML do caminho especificado (caminho_do_arquivo.xml), para uma string codificada em base64.
 
         const fs = require("fs");
 
@@ -36,25 +37,20 @@ export default async function atmCancela() {
         fileBase64.toString("base64")
 
         // Payload: Informações que serão enviadas para a API da IntegraNotas
-
-        // OBS: Não utilize o payload de exemplo abaixo, ele é apenas um exemplo. 
-        // Consulte a documentação para construir o payload para sua aplicação.
+        // OBS: Não utilize o payload de exemplo abaixo, ele é apenas um exemplo. Consulte a documentação para construir o payload para sua aplicação.
 
         const payload = {
             xml: fileBase64,
             usuario: "login",
             senha: "senha",
-            codigo: "codigo",
             chave: "50000000000000000000000000000000000000000000"
         }
 
-        // Chamada para o método atmCancela na classe averbacao
+        //  Chamada para o método portoSeguroCancela na classe averbacao
+        // resp = Resposta da requisição (Objeto com informações de retorno da requisicao)
 
-        // resp = Resposta da requisição (Objeto com informações de retorno da requisição)
+        const resp = await averbacao.portoSeguroCancela(payload)
 
-        const resp = await averbacao.atmCancela(payload)
-
-        // Visualização do retorno
         console.log(resp)
 
     } catch (error) {
@@ -66,4 +62,4 @@ export default async function atmCancela() {
 
 }
 
-atmCancela();
+portoSeguroCancelaXml();

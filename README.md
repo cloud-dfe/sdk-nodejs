@@ -18,10 +18,6 @@ yarn add sdk-cloud-dfe
 
 ```ts
 
-// Se estiver utilizando o SDK baixado
-
-import Nfe from "../../src/Nfe";
-import { AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "../../src/Base";
 
 // Se estiver utilizando o SDK pelas instalações dos comandos npm ou yarn
 

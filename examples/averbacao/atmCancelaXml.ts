@@ -1,18 +1,11 @@
-import Cte from "../../src/Cte";
+import Averbacao from "../../src/Averbacao";
 
 // Se estiver utilizando o SDK instalado por instalação dos comandos npm ou yarn
-// import { Cte, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
+// import { Averbacao, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
 
-export default async function cteBackup() {
+export default async function atmCancelaXml() {
 
-    /**
-    * Este exemplo de uma chamada a API usando este SDK
-    *
-    * Este método recupera o backup da CTe emitidas para o período informado
-    *
-    * NOTA: os backup tem a finalidade de garantir mais uma camada de segurança na guarda dos documentos para a softhouse.
-    * NOTA: os backups são gerados no primeiro domingo de cada mês, e não estarão disponíveis até serem gerados.
-    **/
+    // Exemplo de chamada a API usando o SDK
 
     try{
 
@@ -31,25 +24,38 @@ export default async function cteBackup() {
                 port: 443
             }
         }
+        
+        // Instanciamento da classe Averbacao
 
-        // Instanciamento da classe Cte
+        const averbacao = new Averbacao(config);
 
-        const cte = new Cte(config)
+        // Conversão de um arquivo XML do caminho especificado (caminho_do_arquivo.xml), para uma string codificada em base64.
+
+        const fs = require("fs");
+
+        const fileBase64 = fs.readFileSync("caminho_do_arquivo.xml")
+        fileBase64.toString("base64")
 
         // Payload: Informações que serão enviadas para a API da IntegraNotas
-        // OBS: Não utilize o payload de exemplo abaixo, ele é apenas um exemplo. Consulte a documentação para construir o payload para sua aplicação.
 
-        // Ano e mês do backup que deseja recuperar (Devem ser do tipo integer)
+        // OBS: Não utilize o payload de exemplo abaixo, ele é apenas um exemplo. 
+        // Consulte a documentação para construir o payload para sua aplicação.
 
         const payload = {
-            ano: 2021,
-            mes: 2
+            xml: fileBase64,
+            usuario: "login",
+            senha: "senha",
+            codigo: "codigo",
+            chave: "50000000000000000000000000000000000000000000"
         }
 
-        // Chamada para o método backup na classe cte
+        // Chamada para o método atmCancela na classe averbacao
 
-        const resp = await cte.backup(payload)
+        // resp = Resposta da requisição (Objeto com informações de retorno da requisição)
 
+        const resp = await averbacao.atmCancela(payload)
+
+        // Visualização do retorno
         console.log(resp)
 
     } catch (error) {
@@ -57,9 +63,8 @@ export default async function cteBackup() {
         // Em caso de erros será lançado uma exceção com a mensagem de erro
 
         console.error("Ocorreu um erro:", error);
-
     }
 
 }
 
-cteBackup()
+atmCancelaXml();
