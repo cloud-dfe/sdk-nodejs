@@ -3,6 +3,7 @@ import Client, { ConfigClient } from "./Client";
 interface ConfigBase {
     ambiente: number;
     token: string;
+    version?: "1" | "2" | string;
     timeout?: number;
     port?: number;  
     debug?: boolean;  
@@ -48,6 +49,7 @@ export default class Base {
         const config: ConfigClient = {
             ambiente: params.ambiente,
             token: params.token,
+            version: params.version,
             timeout: finalConfig.timeout,
             port: finalConfig.port,
             debug: finalConfig.debug,

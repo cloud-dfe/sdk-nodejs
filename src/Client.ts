@@ -3,6 +3,7 @@ import Services, { ConfigServices } from "./Services";
 export interface ConfigClient {
     token: string
     ambiente: number
+    version?: "1" | "2" | string
     timeout?: number
     port?: number
     debug?: boolean
@@ -15,8 +16,8 @@ export interface ConfigClient {
 
 const URI: { [key: string]: { [key: number]: string } } = {
     "api": {
-        1: "https://api.integranotas.com.br/v1",
-        2: "https://hom-api.integranotas.com.br/v1"
+        1: "https://api.integranotas.com.br/v",
+        2: "https://hom-api.integranotas.com.br/v"
     }
 }; 
 
@@ -24,6 +25,7 @@ export default class Client {
 
     token: string
     ambiente: number
+    version: "1" | "2" | string
     timeout: number
     port: number
     debug: boolean
@@ -43,12 +45,17 @@ export default class Client {
         if (!config.token || typeof config.token !== "string" || config.token.trim() === "") {
             throw new Error("O TOKEN é obrigatorio.");
         }
+
+        if (!config.version) {
+            config.version = "1"
+        }
         
         this.ambiente = config.ambiente
         this.token = config.token
         this.timeout = (config.timeout || 60) * 1000
         this.port = (config.port || 443)
         this.debug = (config.debug || false)
+        this.version = config.version
 
         if (config.options) {
             this.timeout = config.options.timeout ?? this.timeout;
@@ -57,7 +64,7 @@ export default class Client {
         }
 
         const configServices: ConfigServices = {
-            baseUri: URI["api"][this.ambiente],
+            baseUri: URI["api"][this.ambiente] + this.version,
             timeout: this.timeout,
             port: this.port,
             debug: this.debug,
