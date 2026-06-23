@@ -1,4 +1,4 @@
-import Nfse from "../../src/Nfse";
+import Nfse from "../../../src/Nfse";
 
 // import { Nfse, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO } from "sdk-cloud-dfe/dist";
 
