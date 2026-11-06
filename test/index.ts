@@ -2,6 +2,14 @@ import atmXml from "../examples/averbacao/atmXml"
 import portoSeguroXml from "../examples/averbacao/portoSeguroXml"
 import certificadoAtualiza from "../examples/certificado/certificadoAtualiza"
 import certificadoMostra from "../examples/certificado/certificadoMostra"
+import ciotBusca from "../examples/ciot/ciotBusca"
+import ciotCancela from "../examples/ciot/ciotCancela"
+import ciotConsulta from "../examples/ciot/ciotConsulta"
+import ciotCria from "../examples/ciot/ciotCria"
+import ciotEncerra from "../examples/ciot/ciotEncerra"
+import ciotPdf from "../examples/ciot/ciotPdf"
+import ciotRetifica from "../examples/ciot/ciotRetifica"
+import ciotTransportador from "../examples/ciot/ciotTransportador"
 import cteBackup from "../examples/cte/cteBackup"
 import cteBusca from "../examples/cte/cteBusca"
 import cteCancela from "../examples/cte/cteCancela"
@@ -133,6 +141,15 @@ function main() {
     // certificadoAtualiza()
     // certificadoMostra()
 
+    // ciotBusca()
+    // ciotCancela()
+    // ciotConsulta()
+    // ciotCria()
+    // ciotEncerra()
+    // ciotPdf()
+    // ciotRetifica()
+    // ciotTransportador()
+    
     // cteBackup()
     // cteBusca()
     // cteCancela()
