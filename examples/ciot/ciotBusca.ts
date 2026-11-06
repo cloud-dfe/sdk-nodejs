@@ -18,6 +18,8 @@ export default async function ciotBusca() {
         const ciot = new Ciot(config)
 
         const payload = {
+            "numero_inicial": "1",
+            "numero_final": "1999",
             "data_inicial": "2026-11-01",
             "data_final": "2026-11-30",
             "situacao": "ABERTO",

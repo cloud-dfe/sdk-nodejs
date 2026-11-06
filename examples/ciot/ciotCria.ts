@@ -18,7 +18,8 @@ export default async function ciotCria() {
         const ciot = new Ciot(config)
 
         const payload = {
-            "identificacao": "VIAGEM-0001",
+            "numero": "1001",
+            "identificacao": "PEDIDO-77",
             "tipo_operacao": "1",
             "data_inicio": "2026-11-10",
             "data_fim": "2026-11-12",
@@ -89,7 +90,7 @@ export default async function ciotCria() {
 
         if (resp.sucesso) {
             if (resp.codigo == 5023) {
-                // lote em processamento: consultar pela identificação ou esperar o webhook
+                // lote em processamento: consultar pela chave ou esperar o webhook
             } else {
                 // CIOT declarado
             }

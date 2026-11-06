@@ -7,8 +7,8 @@ export default class Ciot extends Base {
     }
 
     public async consulta(payload: any): Promise<any>{
-        const identificacao = this.checkIdentificacao(payload)
-        return this.client.send("GET", `/ciot/${identificacao}`, []);
+        const key = this.checkKey(payload)
+        return this.client.send("GET", `/ciot/${key}`, []);
     }
 
     public async busca(payload: any): Promise<any>{
@@ -28,21 +28,13 @@ export default class Ciot extends Base {
     }
 
     public async pdf(payload: any): Promise<any>{
-        const identificacao = this.checkIdentificacao(payload)
-        return this.client.send("GET", `/ciot/pdf/${identificacao}`, []);
+        const key = this.checkKey(payload)
+        return this.client.send("GET", `/ciot/pdf/${key}`, []);
     }
 
     public async transportador(payload: any): Promise<any>{
         return this.client.send("POST", "/ciot/transportador", payload);
     }
 
-    // o CIOT é identificado pela identificação informada na criação, não por chave de acesso
-    private checkIdentificacao(payload: any): string {
-        const identificacao: string = String(payload?.identificacao ?? "").trim();
-        if (!/^[A-Za-z0-9._-]{1,40}$/.test(identificacao)) {
-            throw new Error("A identificação do CIOT deve ter de 1 a 40 caracteres: letras, números, ponto, hífen ou sublinhado.");
-        }
-        return encodeURIComponent(identificacao);
-    }
 
 }

@@ -18,7 +18,7 @@ export default async function ciotRetifica() {
         const ciot = new Ciot(config)
 
         const payload = {
-            "identificacao": "VIAGEM-0001",
+            "chave": "41261122333444000181927090000010011360347860",
             "data_fim": "2026-11-13",
             "valor_frete": "4800.00",
             "pagamentos": [

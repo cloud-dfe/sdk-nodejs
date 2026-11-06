@@ -18,7 +18,7 @@ export default async function ciotCancela() {
         const ciot = new Ciot(config)
 
         const payload = {
-            "identificacao": "VIAGEM-0001",
+            "chave": "41261122333444000181927090000010011360347860",
             "justificativa": "Viagem cancelada pelo contratante"
         };
 
