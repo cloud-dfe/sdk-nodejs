@@ -10,6 +10,14 @@ import ciotEncerra from "../examples/ciot/ciotEncerra"
 import ciotPdf from "../examples/ciot/ciotPdf"
 import ciotRetifica from "../examples/ciot/ciotRetifica"
 import ciotTransportador from "../examples/ciot/ciotTransportador"
+import vpoBusca from "../examples/vpo/vpoBusca"
+import vpoCancela from "../examples/vpo/vpoCancela"
+import vpoConsulta from "../examples/vpo/vpoConsulta"
+import vpoCria from "../examples/vpo/vpoCria"
+import vpoPdf from "../examples/vpo/vpoPdf"
+import vpoReemite from "../examples/vpo/vpoReemite"
+import vpoRota from "../examples/vpo/vpoRota"
+import vpoVeiculo from "../examples/vpo/vpoVeiculo"
 import cteBackup from "../examples/cte/cteBackup"
 import cteBusca from "../examples/cte/cteBusca"
 import cteCancela from "../examples/cte/cteCancela"
@@ -149,6 +157,14 @@ function main() {
     // ciotPdf()
     // ciotRetifica()
     // ciotTransportador()
+    // vpoBusca()
+    // vpoCancela()
+    // vpoConsulta()
+    // vpoCria()
+    // vpoPdf()
+    // vpoReemite()
+    // vpoRota()
+    // vpoVeiculo()
     
     // cteBackup()
     // cteBusca()
