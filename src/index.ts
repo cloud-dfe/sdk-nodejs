@@ -8,6 +8,7 @@ import Emitente from "./Emitente";
 import Gnre from "./Gnre";
 import Mdfe from "./Mdfe";
 import Nfce from "./Nfce";
+import Nfabi from "./Nfabi";
 import Nfcom from "./Nfcom";
 import Nfe from "./Nfe";
 import Nfse from "./Nfse";
@@ -19,4 +20,4 @@ import Webhook from "./Webhook";
 const AMBIENTE_PRODUCAO = 1;
 const AMBIENTE_HOMOLOGACAO = 2;
 
-export { Averbacao, Certificado, Ciot, Cte, CteOs, Dfe, Emitente, Gnre, Mdfe, Nfce, Nfcom, Nfe, Nfse, Softhouse, Util, Vpo, Webhook, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO }
+export { Averbacao, Certificado, Ciot, Cte, CteOs, Dfe, Emitente, Gnre, Mdfe, Nfce, Nfabi, Nfcom, Nfe, Nfse, Softhouse, Util, Vpo, Webhook, AMBIENTE_HOMOLOGACAO, AMBIENTE_PRODUCAO }
