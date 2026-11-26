@@ -23,27 +23,27 @@ export default async function nfabiCancela() {
             "valor_parcela": "10000.00",
             "valor_total_parcela": "10000.00",
             "data_pagamento": "2027-01-10",
-            "tributacao": {
-                "cst": "200",
+            "imposto": {
+                "situacao_tributaria": "200",
                 "classificacao_tributaria": "200046",
-                "valor_operacao": "10000.00",
-                "base_calculo": "10000.00",
-                "ibs_uf": {
+                "valor_operacao_individual": "10000.00",
+                "valor_base_calculo": "10000.00",
+                "ibs_estadual": {
                     "aliquota": "0.1000",
-                    "reducao_aliquota": "50.0000",
-                    "aliquota_efetiva": "0.0500",
+                    "percentual_reducao": "50.0000",
+                    "aliquota_reducao_base_calculo_efetiva": "0.0500",
                     "valor": "5.00"
                 },
                 "ibs_municipal": {
                     "aliquota": "0.0000",
-                    "reducao_aliquota": "50.0000",
-                    "aliquota_efetiva": "0.0000",
+                    "percentual_reducao": "50.0000",
+                    "aliquota_reducao_base_calculo_efetiva": "0.0000",
                     "valor": "0.00"
                 },
                 "cbs": {
                     "aliquota": "0.9000",
-                    "reducao_aliquota": "50.0000",
-                    "aliquota_efetiva": "0.4500",
+                    "percentual_reducao": "50.0000",
+                    "aliquota_reducao_base_calculo_efetiva": "0.4500",
                     "valor": "45.00"
                 }
             }

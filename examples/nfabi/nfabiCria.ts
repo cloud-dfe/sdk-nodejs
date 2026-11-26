@@ -23,7 +23,7 @@ export default async function nfabiCancela() {
             "serie": "1",
             "data_emissao": "2026-12-14T10:00:00-03:00",
             "tipo_documento": "0",
-            "finalidade": "1",
+            "finalidade_emissao": "1",
             "tipo_emitente": "01",
             "operacao": {
                 "modalidade": "01",
@@ -42,7 +42,7 @@ export default async function nfabiCancela() {
                 {
                     "cnpj": "10944071000104",
                     "nome": "VENDEDOR TESTE LTDA",
-                    "contribuinte": "1"
+                    "indicador_contribuinte": "1"
                 }
             ],
             "adquirentes": [
@@ -81,28 +81,28 @@ export default async function nfabiCancela() {
                     "cep": "40000000"
                 }
             },
-            "tributacao": {
-                "cst": "200",
+            "imposto": {
+                "situacao_tributaria": "200",
                 "classificacao_tributaria": "200046",
-                "ibscbs": {
-                    "valor_operacao": "500000.00",
-                    "base_calculo": "500000.00",
-                    "ibs_uf": {
+                "grupo_ibs_cbs": {
+                    "valor_operacao_individual": "500000.00",
+                    "valor_base_calculo": "500000.00",
+                    "ibs_estadual": {
                         "aliquota": "0.1000",
-                        "reducao_aliquota": "50.0000",
-                        "aliquota_efetiva": "0.0500",
+                        "percentual_reducao": "50.0000",
+                        "aliquota_reducao_base_calculo_efetiva": "0.0500",
                         "valor": "250.00"
                     },
                     "ibs_municipal": {
                         "aliquota": "0.0000",
-                        "reducao_aliquota": "50.0000",
-                        "aliquota_efetiva": "0.0000",
+                        "percentual_reducao": "50.0000",
+                        "aliquota_reducao_base_calculo_efetiva": "0.0000",
                         "valor": "0.00"
                     },
                     "cbs": {
                         "aliquota": "0.9000",
-                        "reducao_aliquota": "50.0000",
-                        "aliquota_efetiva": "0.4500",
+                        "percentual_reducao": "50.0000",
+                        "aliquota_reducao_base_calculo_efetiva": "0.4500",
                         "valor": "2250.00"
                     }
                 }
